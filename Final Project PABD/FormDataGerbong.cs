@@ -16,5 +16,10 @@ namespace Final_Project_PABD
         {
             InitializeComponent();
         }
+
+        private void FormDataGerbong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

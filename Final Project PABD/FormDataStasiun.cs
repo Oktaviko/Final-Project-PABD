@@ -16,5 +16,10 @@ namespace Final_Project_PABD
         {
             InitializeComponent();
         }
+
+        private void FormDataStasiun_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -99,27 +99,27 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(262, 287);
+            this.btnAdd.Location = new System.Drawing.Point(387, 273);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(77, 41);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(262, 338);
+            this.btnSave.Location = new System.Drawing.Point(387, 316);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(77, 41);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(262, 380);
+            this.btnClear.Location = new System.Drawing.Point(387, 363);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(77, 41);
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -150,6 +150,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormDataGerbong";
             this.Text = "FormDataGerbong";
+            this.Load += new System.EventHandler(this.FormDataGerbong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

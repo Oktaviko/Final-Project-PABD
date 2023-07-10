@@ -16,5 +16,10 @@ namespace Final_Project_PABD
         {
             InitializeComponent();
         }
+
+        private void FormDataTiket_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
