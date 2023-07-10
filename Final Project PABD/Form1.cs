@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final_Project_PABD
 {
-    public partial class Form1 : Form
+    public partial class HalamanUtama : Form
     {
-        public Form1()
+        public HalamanUtama()
         {
             InitializeComponent();
         }

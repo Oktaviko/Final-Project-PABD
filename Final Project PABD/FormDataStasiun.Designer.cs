@@ -53,13 +53,12 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(458, 181);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(554, 78);
+            this.btnOpen.Location = new System.Drawing.Point(544, 39);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(75, 38);
             this.btnOpen.TabIndex = 1;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;

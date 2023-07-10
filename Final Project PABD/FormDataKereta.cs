@@ -27,5 +27,10 @@ namespace Final_Project_PABD
             dataGridView1_CellContentClick();
             btnOpen.Enabled = false;
         }
+
+        private void FormDataKereta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

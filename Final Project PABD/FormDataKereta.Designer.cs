@@ -36,13 +36,14 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -52,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 257);
+            this.label1.Location = new System.Drawing.Point(67, 272);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
@@ -61,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 302);
+            this.label2.Location = new System.Drawing.Point(67, 317);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 2;
@@ -70,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 345);
+            this.label3.Location = new System.Drawing.Point(67, 360);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(278, 338);
+            this.btnClear.Location = new System.Drawing.Point(308, 351);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 34);
             this.btnClear.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(521, 46);
+            this.btnOpen.Location = new System.Drawing.Point(542, 30);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 53);
             this.btnOpen.TabIndex = 5;
@@ -97,7 +98,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(278, 257);
+            this.btnAdd.Location = new System.Drawing.Point(308, 270);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 34);
             this.btnAdd.TabIndex = 6;
@@ -106,18 +107,28 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(278, 299);
+            this.btnSave.Location = new System.Drawing.Point(308, 312);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 34);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(713, 408);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 30);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
             // FormDataKereta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
@@ -128,6 +139,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormDataKereta";
             this.Text = "FormDataKereta";
+            this.Load += new System.EventHandler(this.FormDataKereta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnBack;
     }
 }

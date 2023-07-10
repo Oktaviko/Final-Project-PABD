@@ -1,6 +1,6 @@
 ﻿namespace Final_Project_PABD
 {
-    partial class Form1
+    partial class HalamanUtama
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HalamanUtama));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -117,13 +117,13 @@
             this.dataTiketToolStripMenuItem.Text = "Data Tiket";
             this.dataTiketToolStripMenuItem.Click += new System.EventHandler(this.dataTiketToolStripMenuItem_Click);
             // 
-            // Form1
+            // HalamanUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 510);
             this.Controls.Add(this.bindingNavigator1);
-            this.Name = "Form1";
+            this.Name = "HalamanUtama";
             this.Text = "MENU";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
