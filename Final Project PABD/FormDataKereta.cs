@@ -39,5 +39,37 @@ namespace Final_Project_PABD
             HU.Show();
             this.Hide();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxNamaKereta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxIDKereta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxJenisKereta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshform()
+        {
+            tbxIDKereta.Text = "";
+            tbxIDKereta.Enabled = true;
+            tbxNamaKereta.Text = "";
+            tbxNamaKereta.Enabled = true;
+            cbxJenisKereta.Enabled = false;
+            cbxJenisKereta.SelectedIndex = -1;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+        }
     }
 }
