@@ -52,6 +52,36 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDataGerbong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataGerbong.Designer.cs">
+      <DependentUpon>FormDataGerbong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataKereta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataKereta.Designer.cs">
+      <DependentUpon>FormDataKereta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataPelanggan.Designer.cs">
+      <DependentUpon>FormDataPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataStasiun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataStasiun.Designer.cs">
+      <DependentUpon>FormDataStasiun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataTiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataTiket.Designer.cs">
+      <DependentUpon>FormDataTiket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
