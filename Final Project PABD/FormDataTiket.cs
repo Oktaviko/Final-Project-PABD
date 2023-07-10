@@ -33,5 +33,12 @@ namespace Final_Project_PABD
             dataGridView1_CellContentClick();
             btnOpen.Enabled = false;
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HalamanUtama HU = new HalamanUtama();
+            HU.Show();
+            this.Hide();
+        }
     }
 }
