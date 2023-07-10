@@ -39,6 +39,10 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnBox = new System.Windows.Forms.Button();
+            this.txtKps = new System.Windows.Forms.TextBox();
+            this.txtNO = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtKls = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,16 +104,17 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(387, 273);
+            this.btnAdd.Location = new System.Drawing.Point(470, 247);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(77, 41);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(387, 316);
+            this.btnSave.Location = new System.Drawing.Point(470, 317);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(77, 41);
             this.btnSave.TabIndex = 7;
@@ -118,12 +123,13 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(387, 363);
+            this.btnClear.Location = new System.Drawing.Point(470, 389);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(77, 41);
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnOpen
             // 
@@ -145,11 +151,43 @@
             this.btnBox.UseVisualStyleBackColor = true;
             this.btnBox.Click += new System.EventHandler(this.btnBox_Click);
             // 
+            // txtKps
+            // 
+            this.txtKps.Location = new System.Drawing.Point(196, 360);
+            this.txtKps.Name = "txtKps";
+            this.txtKps.Size = new System.Drawing.Size(162, 22);
+            this.txtKps.TabIndex = 12;
+            // 
+            // txtNO
+            // 
+            this.txtNO.Location = new System.Drawing.Point(196, 323);
+            this.txtNO.Name = "txtNO";
+            this.txtNO.Size = new System.Drawing.Size(162, 22);
+            this.txtNO.TabIndex = 13;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(196, 288);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(162, 22);
+            this.txtID.TabIndex = 14;
+            // 
+            // txtKls
+            // 
+            this.txtKls.Location = new System.Drawing.Point(196, 398);
+            this.txtKls.Name = "txtKls";
+            this.txtKls.Size = new System.Drawing.Size(162, 22);
+            this.txtKls.TabIndex = 15;
+            // 
             // FormDataGerbong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtKls);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtNO);
+            this.Controls.Add(this.txtKps);
             this.Controls.Add(this.btnBox);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnClear);
@@ -183,5 +221,9 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnBox;
+        private System.Windows.Forms.TextBox txtKps;
+        private System.Windows.Forms.TextBox txtNO;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtKls;
     }
 }

@@ -61,5 +61,10 @@ namespace Final_Project_PABD
         {
 
         }
+
+        private void HalamanUtama_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -145,6 +145,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "HalamanUtama";
             this.Text = "MENU";
+            this.Load += new System.EventHandler(this.HalamanUtama_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
