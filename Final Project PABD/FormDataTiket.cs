@@ -21,5 +21,16 @@ namespace Final_Project_PABD
         {
 
         }
+
+
+        private void dataGridView1_CellContentClick()
+        {
+
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
