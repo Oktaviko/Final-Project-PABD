@@ -51,5 +51,15 @@ namespace Final_Project_PABD
             fm.Show();
             this.Hide();
         }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
