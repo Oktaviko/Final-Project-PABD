@@ -50,6 +50,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(420, 181);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -132,6 +133,7 @@
             this.btnOpen.TabIndex = 9;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // FormDataGerbong
             // 
