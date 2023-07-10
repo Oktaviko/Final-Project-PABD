@@ -89,9 +89,9 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(520, 52);
+            this.btnOpen.Location = new System.Drawing.Point(496, 34);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 33);
+            this.btnOpen.Size = new System.Drawing.Size(75, 38);
             this.btnOpen.TabIndex = 5;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;

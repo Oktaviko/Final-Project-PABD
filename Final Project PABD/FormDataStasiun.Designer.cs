@@ -57,7 +57,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(544, 39);
+            this.btnOpen.Location = new System.Drawing.Point(533, 39);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 38);
             this.btnOpen.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(318, 264);
+            this.btnAdd.Location = new System.Drawing.Point(371, 267);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 39);
             this.btnAdd.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(318, 320);
+            this.btnClear.Location = new System.Drawing.Point(371, 323);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 39);
             this.btnClear.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(318, 372);
+            this.btnSave.Location = new System.Drawing.Point(371, 375);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 39);
             this.btnSave.TabIndex = 4;
@@ -122,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 389);
+            this.label4.Location = new System.Drawing.Point(88, 386);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 9;
@@ -130,30 +130,30 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 268);
+            this.textBox1.Location = new System.Drawing.Point(195, 272);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(127, 22);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 310);
+            this.textBox2.Location = new System.Drawing.Point(195, 310);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(127, 22);
             this.textBox2.TabIndex = 11;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(185, 349);
+            this.textBox3.Location = new System.Drawing.Point(195, 346);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.Size = new System.Drawing.Size(127, 22);
             this.textBox3.TabIndex = 12;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(185, 389);
+            this.textBox4.Location = new System.Drawing.Point(195, 386);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.Size = new System.Drawing.Size(127, 22);
             this.textBox4.TabIndex = 13;
             // 
             // btnBack
