@@ -99,6 +99,7 @@ namespace Final_Project_PABD
             cbxJenisKereta.SelectedIndex = -1;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
+            btnAdd.Enabled = true;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
