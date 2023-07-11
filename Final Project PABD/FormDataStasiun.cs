@@ -158,14 +158,14 @@ namespace Final_Project_PABD
         private void foreignkey()
         {
             koneksi.Open();
-            string str = "select id_tiket, nm_kereta from dbo.Tiket";
+            string str = "select id_tiket from dbo.Tiket";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             cmd.ExecuteReader();
             koneksi.Close();
-            cbxTikt.DisplayMember = "nm_kereta";
+            cbxTikt.DisplayMember = "id_tiket";
             cbxTikt.ValueMember = "id_tiket";
             cbxTikt.DataSource = ds.Tables[0];
         }
