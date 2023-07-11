@@ -45,6 +45,8 @@
             this.tbxNamaKereta = new System.Windows.Forms.TextBox();
             this.keretaTableAdapter = new Final_Project_PABD.FinalPABDDataSetTableAdapters.KeretaTableAdapter();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxIDStasiun = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
@@ -65,6 +67,7 @@
             // 
             this.keretaBindingSource.DataMember = "Kereta";
             this.keretaBindingSource.DataSource = this.finalPABDDataSet;
+            this.keretaBindingSource.CurrentChanged += new System.EventHandler(this.keretaBindingSource_CurrentChanged);
             // 
             // finalPABDDataSet
             // 
@@ -74,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 260);
+            this.label1.Location = new System.Drawing.Point(57, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
@@ -83,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 306);
+            this.label2.Location = new System.Drawing.Point(57, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 2;
@@ -92,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 355);
+            this.label3.Location = new System.Drawing.Point(59, 325);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 3;
@@ -150,7 +153,7 @@
             // 
             // tbxIDKereta
             // 
-            this.tbxIDKereta.Location = new System.Drawing.Point(171, 355);
+            this.tbxIDKereta.Location = new System.Drawing.Point(171, 325);
             this.tbxIDKereta.Name = "tbxIDKereta";
             this.tbxIDKereta.Size = new System.Drawing.Size(121, 22);
             this.tbxIDKereta.TabIndex = 9;
@@ -159,7 +162,7 @@
             // cbxJenisKereta
             // 
             this.cbxJenisKereta.FormattingEnabled = true;
-            this.cbxJenisKereta.Location = new System.Drawing.Point(171, 306);
+            this.cbxJenisKereta.Location = new System.Drawing.Point(171, 283);
             this.cbxJenisKereta.Name = "cbxJenisKereta";
             this.cbxJenisKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxJenisKereta.TabIndex = 11;
@@ -167,7 +170,7 @@
             // 
             // tbxNamaKereta
             // 
-            this.tbxNamaKereta.Location = new System.Drawing.Point(171, 254);
+            this.tbxNamaKereta.Location = new System.Drawing.Point(171, 236);
             this.tbxNamaKereta.Name = "tbxNamaKereta";
             this.tbxNamaKereta.Size = new System.Drawing.Size(121, 22);
             this.tbxNamaKereta.TabIndex = 12;
@@ -187,12 +190,32 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(59, 369);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "ID Stasiun";
+            // 
+            // cbxIDStasiun
+            // 
+            this.cbxIDStasiun.FormattingEnabled = true;
+            this.cbxIDStasiun.Location = new System.Drawing.Point(171, 363);
+            this.cbxIDStasiun.Name = "cbxIDStasiun";
+            this.cbxIDStasiun.Size = new System.Drawing.Size(121, 24);
+            this.cbxIDStasiun.TabIndex = 16;
+            this.cbxIDStasiun.SelectedIndexChanged += new System.EventHandler(this.cbxIDStasiun_SelectedIndexChanged);
+            // 
             // FormDataKereta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxIDStasiun);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tbxNamaKereta);
             this.Controls.Add(this.cbxJenisKereta);
@@ -235,5 +258,7 @@
         private System.Windows.Forms.BindingSource keretaBindingSource;
         private FinalPABDDataSetTableAdapters.KeretaTableAdapter keretaTableAdapter;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbxIDStasiun;
     }
 }

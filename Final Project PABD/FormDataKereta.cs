@@ -62,20 +62,23 @@ namespace Final_Project_PABD
             string NamaKereta = tbxNamaKereta.Text;
             string JenisKereta = cbxJenisKereta.Text;
             string IDKereta = tbxIDKereta.Text;
+            string IDStasiun = cbxIDStasiun.Text;
 
-            if (NamaKereta  == "" || JenisKereta == "" || IDKereta == "" )
+            if (NamaKereta  == "" || JenisKereta == "" || IDKereta == "" || IDStasiun=="")
             {
                 MessageBox.Show("Masukkan Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Kereta (nm_kereta, jns_Kereta, id_Kereta) VALUES (@nm_kereta, @jns_Kereta, @id_Kereta)";
+                string str = "insert into dbo.Kereta (nm_kereta, jns_Kereta, id_Kereta, id_stasiun) VALUES (@nm_kereta, @jns_Kereta, @id_Kereta, @id_stasiun)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@nm_kereta", NamaKereta));
                 cmd.Parameters.Add(new SqlParameter("@jns_Kereta", JenisKereta));
                 cmd.Parameters.Add(new SqlParameter("@id_Kereta", IDKereta));
+                cmd.Parameters.Add(new SqlParameter("@id_stasiun", IDStasiun));
+                
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
@@ -108,6 +111,8 @@ namespace Final_Project_PABD
             tbxNamaKereta.Enabled = true;
             cbxJenisKereta.Enabled = false;
             cbxJenisKereta.SelectedIndex = -1;
+            cbxIDStasiun.Enabled = false;
+            cbxIDStasiun.SelectedIndex = -1;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
@@ -174,6 +179,16 @@ namespace Final_Project_PABD
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void keretaBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxIDStasiun_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
