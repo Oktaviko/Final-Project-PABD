@@ -121,5 +121,35 @@ namespace Final_Project_PABD
                 refreshform();
             }
         }
+        private void HapusData()
+        {
+            string NIK = txtNIK.Text;
+            if (NIK == "" )
+            {
+                MessageBox.Show("Masukkan NIK Anda !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus data?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Pelanggan WHERE nik = @nik";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@nik", NIK));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HapusData();
+        }
     }
 }
