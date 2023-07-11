@@ -61,6 +61,7 @@ namespace Final_Project_PABD
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+            id_keretaa();
         }
         private void id_keretaa()
         {
