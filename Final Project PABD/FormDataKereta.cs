@@ -49,6 +49,20 @@ namespace Final_Project_PABD
             cbxJenisKereta.Items.Add("KL");
 
         }
+        private void id_staisunn()
+        {
+            koneksi.Open();
+            string str = "select id_stasiun from dbo.Stasiun";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxIDStasiun.DisplayMember = "id_stasiun";
+            cbxIDStasiun.ValueMember = "id_stasiun";
+            cbxIDStasiun.DataSource = ds.Tables[0];
+        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -127,6 +141,7 @@ namespace Final_Project_PABD
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+            id_staisunn();
         }
 
         private void dataGridView1_CellContentClick()
