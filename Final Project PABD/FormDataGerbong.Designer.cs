@@ -43,6 +43,7 @@
             this.txtNO = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbxKls = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,11 +183,22 @@
             this.cbxKls.TabIndex = 15;
             this.cbxKls.SelectedIndexChanged += new System.EventHandler(this.cbxKls_SelectedIndexChanged);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(624, 288);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(83, 42);
+            this.btnDelete.TabIndex = 16;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormDataGerbong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxKls);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtNO);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.TextBox txtNO;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ComboBox cbxKls;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
