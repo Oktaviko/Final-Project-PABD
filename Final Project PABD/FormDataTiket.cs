@@ -32,16 +32,30 @@ namespace Final_Project_PABD
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            tbxIDTiket.Text = "";
+            tbxIDTiket.Enabled = true;
+            tbxNoKursi.Text = "";
+            tbxNoKursi.Enabled = true;
+            cbxKeberangkatan.Text = "";
+            cbxKeberangkatan.Enabled = true;
+            cbxNamaKereta.Text = "";
+            cbxNamaKereta.Enabled = true;
+            cbxTujuan.Text = "";
+            cbxTujuan.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
+        }
+
         private void FormDataTiket_Load(object sender, EventArgs e)
         {
-
+            InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
+            refreshform();
         }
 
-
-        private void dataGridView1_CellContentClick()
-        {
-
-        }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
@@ -72,6 +86,11 @@ namespace Final_Project_PABD
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
