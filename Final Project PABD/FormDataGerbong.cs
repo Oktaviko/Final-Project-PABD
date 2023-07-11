@@ -31,6 +31,8 @@ namespace Final_Project_PABD
             txtNO.Enabled = true;
             cbxKls.Enabled = false;
             cbxKls.SelectedIndex = -1;
+            cbxIDKreta.Enabled = false;
+            cbxIDKreta.SelectedIndex = -1;
             txtKps.Text = "";
             txtKps.Enabled = true;
             btnSave.Enabled = false;
@@ -55,9 +57,24 @@ namespace Final_Project_PABD
             txtNO.Enabled = true;
             txtKps.Enabled = true;
             cbxKls.Enabled = true;
+            cbxIDKreta.Enabled = true;
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+        }
+        private void id_keretaa()
+        {
+            koneksi.Open();
+            string str = "select id_kereta from dbo.Kereta";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxIDKreta.DisplayMember = "id_kereta";
+            cbxIDKreta.ValueMember = "id_kereta";
+            cbxIDKreta.DataSource = ds.Tables[0];
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -111,21 +128,23 @@ namespace Final_Project_PABD
             string no_gerbong = txtNO.Text;
             string kelas = cbxKls.Text;
             string kapasitas = txtKps.Text;
+            string id_kereta = cbxIDKreta.Text;
 
-            if (id_gerbong == "" || no_gerbong == "" || kelas == "" || kapasitas == "")
+            if (id_gerbong == "" || no_gerbong == "" || kelas == "" || kapasitas == "" || id_kereta == "")
             {
                 MessageBox.Show("Harap Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Gerbong (id_gerbong, no_gerbong, kelas, kapasitas) VALUES (@id_gerbong, @no_gerbong, @kelas, @kapasitas)";
+                string str = "insert into dbo.Gerbong (id_gerbong, no_gerbong, kelas, kapasitas, id_kereta) VALUES (@id_gerbong, @no_gerbong, @kelas, @kapasitas, @id_kereta)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text; 
                 cmd.Parameters.Add(new SqlParameter("@id_gerbong", id_gerbong));
                 cmd.Parameters.Add(new SqlParameter("@no_gerbong", no_gerbong));
                 cmd.Parameters.Add(new SqlParameter("@kelas", kelas));
                 cmd.Parameters.Add(new SqlParameter("@kapasitas", kapasitas));
+                cmd.Parameters.Add(new SqlParameter("@id_kereta", id_kereta));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
@@ -165,6 +184,11 @@ namespace Final_Project_PABD
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
         {
 
         }

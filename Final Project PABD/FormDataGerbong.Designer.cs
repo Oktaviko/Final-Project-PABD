@@ -43,6 +43,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbxKls = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxIDKreta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 294);
+            this.label2.Location = new System.Drawing.Point(48, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 2;
@@ -69,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 329);
+            this.label3.Location = new System.Drawing.Point(48, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 3;
@@ -78,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 366);
+            this.label4.Location = new System.Drawing.Point(48, 342);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 4;
@@ -87,7 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 401);
+            this.label5.Location = new System.Drawing.Point(48, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 16);
             this.label5.TabIndex = 5;
@@ -145,29 +147,30 @@
             // 
             // txtKps
             // 
-            this.txtKps.Location = new System.Drawing.Point(196, 360);
+            this.txtKps.Location = new System.Drawing.Point(196, 339);
             this.txtKps.Name = "txtKps";
             this.txtKps.Size = new System.Drawing.Size(162, 22);
             this.txtKps.TabIndex = 12;
             // 
             // txtNO
             // 
-            this.txtNO.Location = new System.Drawing.Point(196, 323);
+            this.txtNO.Location = new System.Drawing.Point(196, 301);
             this.txtNO.Name = "txtNO";
             this.txtNO.Size = new System.Drawing.Size(162, 22);
             this.txtNO.TabIndex = 13;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(196, 288);
+            this.txtID.Location = new System.Drawing.Point(196, 266);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(162, 22);
             this.txtID.TabIndex = 14;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // cbxKls
             // 
             this.cbxKls.FormattingEnabled = true;
-            this.cbxKls.Location = new System.Drawing.Point(196, 398);
+            this.cbxKls.Location = new System.Drawing.Point(196, 374);
             this.cbxKls.Name = "cbxKls";
             this.cbxKls.Size = new System.Drawing.Size(162, 24);
             this.cbxKls.TabIndex = 15;
@@ -183,12 +186,31 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 409);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Id_Kereta";
+            // 
+            // cbxIDKreta
+            // 
+            this.cbxIDKreta.FormattingEnabled = true;
+            this.cbxIDKreta.Location = new System.Drawing.Point(196, 409);
+            this.cbxIDKreta.Name = "cbxIDKreta";
+            this.cbxIDKreta.Size = new System.Drawing.Size(162, 24);
+            this.cbxIDKreta.TabIndex = 18;
+            // 
             // FormDataGerbong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxIDKreta);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxKls);
             this.Controls.Add(this.txtID);
@@ -230,5 +252,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ComboBox cbxKls;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbxIDKreta;
     }
 }
