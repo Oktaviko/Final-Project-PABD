@@ -82,5 +82,34 @@ namespace Final_Project_PABD
         {
             refreshform();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string Nama = txtNama.Text;
+            string NIK = txtNIK.Text;
+            string NoHP = txtNohp.Text;
+            string Alamat = txtAlamat.Text;
+
+            if (Nama == "" || NIK == "" || Alamat == "" || NoHP == "")
+            {
+                MessageBox.Show("Masukkan Semua Data", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Pelanggan (nama, nik, alamat, no_hp) VALUES (@nama, @nik, @alamat, @no_hp)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@nama", Nama));
+                cmd.Parameters.Add(new SqlParameter("@nik", NIK));
+                cmd.Parameters.Add(new SqlParameter("@no_hp", NoHP));
+                cmd.Parameters.Add(new SqlParameter("@alamat", Alamat));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
     }
 }
