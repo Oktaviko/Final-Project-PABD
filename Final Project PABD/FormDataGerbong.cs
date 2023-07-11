@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,23 +14,28 @@ namespace Final_Project_PABD
 {
     public partial class FormDataGerbong : Form
     {
-        private string connectionstring = "data source = OKTAVIKO\\YEELZY;database=FinalPABDActiveResultSets=True;User ID = sa; password = 123";
+        private string stringconnection = "data source = OKTAVIKO\\YEELZY;database=FinalPABDActiveResultSets=True;User ID = sa; password = 123";
         private SqlConnection koneksi;
-        private string id_gerbong, no_gerbong, kelas, kapasitas;
 
         public FormDataGerbong()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
+            refreshform();
         }
         private void refreshform()
         {
-            txtID.Enabled = false;
-            txtNO.Enabled = false;
-            txtKps.Enabled = false;
-            txtKls.Enabled = false;
-            btnAdd.Enabled = true;
-            btnClear.Enabled = false;
+            txtID.Text = "";
+            txtID.Enabled = true;
+            txtNO.Text = "";
+            txtNO.Enabled = true;
+            cbxKls.Enabled = false;
+            cbxKls.SelectedIndex = -1;
+            txtKps.Text = "";
+            txtKps.Enabled = true;
             btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
         }
 
         private void FormDataGerbong_Load(object sender, EventArgs e)
@@ -41,11 +47,11 @@ namespace Final_Project_PABD
         {
             txtID.Text = "";
             txtNO.Text = "";
-            txtKls.Text = "";
+            cbxKls.Text = "";
             txtKps.Text = "";
             txtID.Enabled =true;
             txtKps.Enabled =true;
-            txtKls.Enabled =true;
+            cbxKls.Enabled =true;
             txtNO.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;

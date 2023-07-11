@@ -42,7 +42,7 @@
             this.txtKps = new System.Windows.Forms.TextBox();
             this.txtNO = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtKls = new System.Windows.Forms.TextBox();
+            this.cbxKls = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,19 +172,20 @@
             this.txtID.Size = new System.Drawing.Size(162, 22);
             this.txtID.TabIndex = 14;
             // 
-            // txtKls
+            // cbxKls
             // 
-            this.txtKls.Location = new System.Drawing.Point(196, 398);
-            this.txtKls.Name = "txtKls";
-            this.txtKls.Size = new System.Drawing.Size(162, 22);
-            this.txtKls.TabIndex = 15;
+            this.cbxKls.FormattingEnabled = true;
+            this.cbxKls.Location = new System.Drawing.Point(196, 398);
+            this.cbxKls.Name = "cbxKls";
+            this.cbxKls.Size = new System.Drawing.Size(162, 24);
+            this.cbxKls.TabIndex = 15;
             // 
             // FormDataGerbong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtKls);
+            this.Controls.Add(this.cbxKls);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtNO);
             this.Controls.Add(this.txtKps);
@@ -224,6 +225,6 @@
         private System.Windows.Forms.TextBox txtKps;
         private System.Windows.Forms.TextBox txtNO;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtKls;
+        private System.Windows.Forms.ComboBox cbxKls;
     }
 }
