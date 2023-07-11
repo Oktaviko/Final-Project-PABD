@@ -102,7 +102,15 @@ namespace Final_Project_PABD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            string id_gerbong = txtID.Text;
+            string no_gerbong = txtNO.Text;
+            string kelas = cbxKls.Text;
+            string kapasitas = txtKps.Text;
+
+            if (id_gerbong == "" || no_gerbong == "" || kelas == "" || kapasitas == "")
+            {
+                MessageBox.Show("Harap Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
