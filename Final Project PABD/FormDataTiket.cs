@@ -87,7 +87,7 @@ namespace Final_Project_PABD
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
