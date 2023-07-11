@@ -43,6 +43,7 @@
             this.txtNohp = new System.Windows.Forms.TextBox();
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtNIK = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(373, 269);
+            this.btnClear.Location = new System.Drawing.Point(361, 259);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(79, 42);
             this.btnClear.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(373, 343);
+            this.btnSave.Location = new System.Drawing.Point(361, 333);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 42);
             this.btnSave.TabIndex = 8;
@@ -180,12 +181,23 @@
             this.txtNIK.Size = new System.Drawing.Size(130, 22);
             this.txtNIK.TabIndex = 14;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(340, 396);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 42);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FormDataPelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtNIK);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.txtNohp);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.TextBox txtNohp;
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtNIK;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

@@ -151,5 +151,72 @@ namespace Final_Project_PABD
         {
             HapusData();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["NIK"].Value.ToString();
+            string nama = txtNama.Text;
+            string no_hp = txtNohp.Text;
+            string alamat = txtAlamat.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("NIK  tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nama == "")
+            {
+                MessageBox.Show("Masukkan Nama Suplier", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (no_hp == "")
+            {
+                MessageBox.Show("Masukkan Alamat Suplier", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (alamat == "")
+            {
+                MessageBox.Show("Masukkan No Telepon", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            string sql = "UPDATE pelanggan SET nama = @nama, no_hp = @no_hp, alamat = @alamat where NIK = @NIK";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@NIK", id);
+                command.Parameters.AddWithValue("@nama", nama);
+                command.Parameters.AddWithValue("@no_hp", no_hp);
+                command.Parameters.AddWithValue("@alamat", alamat);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        GetDataFromDatabase();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
     }
 }
