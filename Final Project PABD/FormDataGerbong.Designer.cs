@@ -135,7 +135,7 @@
             // 
             // btnBox
             // 
-            this.btnBox.Location = new System.Drawing.Point(723, 418);
+            this.btnBox.Location = new System.Drawing.Point(713, 409);
             this.btnBox.Name = "btnBox";
             this.btnBox.Size = new System.Drawing.Size(75, 29);
             this.btnBox.TabIndex = 10;
@@ -187,6 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxKls);
