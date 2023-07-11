@@ -44,6 +44,29 @@ namespace Final_Project_PABD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string NamaKereta = tbxNamaKereta.Text;
+            string JenisKereta = cbxJenisKereta.Text;
+            string IDKereta = tbxIDKereta.Text;
+
+            if (NamaKereta  == "" || JenisKereta == "" || IDKereta == "" )
+            {
+                MessageBox.Show("Masukkan Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Kereta (nm_kereta, jns_Kereta, id_Kereta) VALUES (@nm_kereta, @jns_Kereta, @id_Kereta)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@nm_kereta", NamaKereta));
+                cmd.Parameters.Add(new SqlParameter("@jns_Kereta", JenisKereta));
+                cmd.Parameters.Add(new SqlParameter("@id_Kereta", IDKereta));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
 
         }
 
