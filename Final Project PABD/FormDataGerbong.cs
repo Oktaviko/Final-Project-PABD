@@ -40,6 +40,12 @@ namespace Final_Project_PABD
 
         private void FormDataGerbong_Load(object sender, EventArgs e)
         {
+            
+
+            cbxKls.Items.Add("Eksekutif");
+            cbxKls.Items.Add("Bisnis");
+            cbxKls.Items.Add("Ekonomi");
+            cbxKls.Items.Add("Premium");
 
         }
 
@@ -61,9 +67,21 @@ namespace Final_Project_PABD
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            dataGridView1_CellContentClick();
+            GetDataFromDatabase();
             btnOpen.Enabled = false;
         }
+        private void GetDataFromDatabase()
+        {
+            koneksi.Open();
+            string str = "SELECT * FROM dbo.Gerbong";
+            SqlDataAdapter da = new  SqlDataAdapter(str, koneksi);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            koneksi.Close();
+        
+        }
+        private void 
 
         private void dataGridView1_CellContentClick()
         {
@@ -75,6 +93,16 @@ namespace Final_Project_PABD
             HalamanUtama HU = new HalamanUtama();
             HU.Show();
             this.Hide();
+        }
+
+        private void cbxKls_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

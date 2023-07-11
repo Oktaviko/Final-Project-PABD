@@ -120,6 +120,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -179,6 +180,7 @@
             this.cbxKls.Name = "cbxKls";
             this.cbxKls.Size = new System.Drawing.Size(162, 24);
             this.cbxKls.TabIndex = 15;
+            this.cbxKls.SelectedIndexChanged += new System.EventHandler(this.cbxKls_SelectedIndexChanged);
             // 
             // FormDataGerbong
             // 
