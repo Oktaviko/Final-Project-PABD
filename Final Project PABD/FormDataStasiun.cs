@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +14,28 @@ namespace Final_Project_PABD
 {
     public partial class FormDataStasiun : Form
     {
+        private string stringconnection = "";
+        private SqlConnection koneksi;
+        
         public FormDataStasiun()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
+            
+        }
+        private void refreshform()
+        {
+            txtNm.Text = "";
+            txtNm.Enabled = true;
+            txtKota.Text = "";
+            txtKota.Enabled = true;
+            txtIdS.Text = "";
+            txtIdS.Enabled = true;
+            txtIdK.Text = "";
+            txtIdK.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
         }
 
         private void FormDataStasiun_Load(object sender, EventArgs e)
