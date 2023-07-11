@@ -45,6 +45,13 @@ namespace Final_Project_PABD
 
         private void dataGridView1_CellContentClick()
         {
+            koneksi.Open();
+            string str = "select * From dbo.Pelanggan";
+            SqlDataAdapter da = new SqlDataAdapter(str , koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
 
         }
 
