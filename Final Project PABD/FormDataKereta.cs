@@ -18,6 +18,8 @@ namespace Final_Project_PABD
         public FormDataKereta()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
+            refreshform();
         }
 
         private void dataGridView1_CellContentClick()
