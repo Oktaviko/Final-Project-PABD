@@ -38,6 +38,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtNama = new System.Windows.Forms.TextBox();
+            this.txtNohp = new System.Windows.Forms.TextBox();
+            this.txtAlamat = new System.Windows.Forms.TextBox();
+            this.txtNIK = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,16 +104,17 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(346, 250);
+            this.btnAdd.Location = new System.Drawing.Point(394, 241);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 42);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(346, 296);
+            this.btnClear.Location = new System.Drawing.Point(394, 308);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(79, 42);
             this.btnClear.TabIndex = 7;
@@ -117,7 +123,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(346, 341);
+            this.btnSave.Location = new System.Drawing.Point(394, 370);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 42);
             this.btnSave.TabIndex = 8;
@@ -134,11 +140,53 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(519, 308);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 43);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(193, 251);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(130, 22);
+            this.txtNama.TabIndex = 11;
+            // 
+            // txtNohp
+            // 
+            this.txtNohp.Location = new System.Drawing.Point(193, 364);
+            this.txtNohp.Name = "txtNohp";
+            this.txtNohp.Size = new System.Drawing.Size(130, 22);
+            this.txtNohp.TabIndex = 12;
+            // 
+            // txtAlamat
+            // 
+            this.txtAlamat.Location = new System.Drawing.Point(193, 328);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(130, 22);
+            this.txtAlamat.TabIndex = 13;
+            // 
+            // txtNIK
+            // 
+            this.txtNIK.Location = new System.Drawing.Point(193, 290);
+            this.txtNIK.Name = "txtNIK";
+            this.txtNIK.Size = new System.Drawing.Size(130, 22);
+            this.txtNIK.TabIndex = 14;
+            // 
             // FormDataPelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNIK);
+            this.Controls.Add(this.txtAlamat);
+            this.Controls.Add(this.txtNohp);
+            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
@@ -170,5 +218,10 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtNama;
+        private System.Windows.Forms.TextBox txtNohp;
+        private System.Windows.Forms.TextBox txtAlamat;
+        private System.Windows.Forms.TextBox txtNIK;
     }
 }

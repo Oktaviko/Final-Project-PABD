@@ -13,17 +13,28 @@ namespace Final_Project_PABD
 {
     public partial class FormDataPelanggan : Form
     {
-        private string connectionstring = "data source = OKTAVIKO\\YEELZY;database=FinalPABD;MultipleActiveResultSets=True;User ID = sa; password = 123";
-        private SqlConnection connection;
+        private string stringconnection = "data source = OKTAVIKO\\YEELZY;database=FinalPABD;MultipleActiveResultSets=True;User ID = sa; password = 123";
+        private SqlConnection koneksi;
         public FormDataPelanggan()
         {
             InitializeComponent();
-            connection = new SqlConnection(connectionstring);
+            koneksi = new SqlConnection(stringconnection);
+            refreshform();
 
         }
         private void refreshform()
         {
-
+            txtNama.Text = "";
+            txtNama.Enabled = true;
+            txtNIK.Text = "";
+            txtNIK.Enabled = true;
+            txtAlamat.Text = "";
+            txtAlamat.Enabled = true;
+            txtNohp.Text = "";
+            txtNohp.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -47,6 +58,17 @@ namespace Final_Project_PABD
         private void FormDataPelanggan_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtNama.Enabled = true;
+            txtNIK.Enabled = true;
+            txtAlamat.Enabled = true;
+            txtNohp.Enabled = true;
+            btnAdd .Enabled = false;
+            btnSave .Enabled = true;
+            btnClear .Enabled = true;
         }
     }
 }
