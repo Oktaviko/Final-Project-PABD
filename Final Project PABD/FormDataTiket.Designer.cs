@@ -45,6 +45,7 @@
             this.tbxIDTiket = new System.Windows.Forms.TextBox();
             this.cbxNamaKereta = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,10 +131,11 @@
             this.tbxNoKursi.Name = "tbxNoKursi";
             this.tbxNoKursi.Size = new System.Drawing.Size(121, 22);
             this.tbxNoKursi.TabIndex = 19;
+            this.tbxNoKursi.TextChanged += new System.EventHandler(this.tbxNoKursi_TextChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(148, 435);
+            this.btnAdd.Location = new System.Drawing.Point(123, 435);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 39);
             this.btnAdd.TabIndex = 20;
@@ -168,6 +170,7 @@
             this.cbxKeberangkatan.Name = "cbxKeberangkatan";
             this.cbxKeberangkatan.Size = new System.Drawing.Size(121, 24);
             this.cbxKeberangkatan.TabIndex = 23;
+            this.cbxKeberangkatan.SelectedIndexChanged += new System.EventHandler(this.cbxKeberangkatan_SelectedIndexChanged);
             // 
             // cbxTujuan
             // 
@@ -176,6 +179,7 @@
             this.cbxTujuan.Name = "cbxTujuan";
             this.cbxTujuan.Size = new System.Drawing.Size(121, 24);
             this.cbxTujuan.TabIndex = 24;
+            this.cbxTujuan.SelectedIndexChanged += new System.EventHandler(this.cbxTujuan_SelectedIndexChanged);
             // 
             // tbxIDTiket
             // 
@@ -192,10 +196,11 @@
             this.cbxNamaKereta.Name = "cbxNamaKereta";
             this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxNamaKereta.TabIndex = 26;
+            this.cbxNamaKereta.SelectedIndexChanged += new System.EventHandler(this.cbxNamaKereta_SelectedIndexChanged);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(256, 435);
+            this.btnDelete.Location = new System.Drawing.Point(231, 435);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
             this.btnDelete.TabIndex = 27;
@@ -203,12 +208,23 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(353, 435);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(83, 39);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FormDataTiket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 499);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxNamaKereta);
             this.Controls.Add(this.tbxIDTiket);
@@ -254,5 +270,6 @@
         private System.Windows.Forms.TextBox tbxIDTiket;
         private System.Windows.Forms.ComboBox cbxNamaKereta;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
