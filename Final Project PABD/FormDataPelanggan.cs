@@ -36,10 +36,20 @@ namespace Final_Project_PABD
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
         }
+        private void GetDataFromDatabase()
+        {
+            koneksi.Open();
+            string str = "SELECT * FROM dbo.Pelanggan";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            koneksi.Close();
+        }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            dataGridView1_CellContentClick();
+            GetDataFromDatabase();
             btnOpen.Enabled = false;
         }
 
