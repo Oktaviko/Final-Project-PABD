@@ -120,7 +120,71 @@ namespace Final_Project_PABD
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            refreshform();
+        }
 
+        private void UpdateData()
+        {
+            string NamaKereta = tbxNamaKereta.Text;
+            string JenisKereta = cbxJenisKereta.Text;
+            string IDKereta = tbxIDKereta.Text;
+
+            if (NamaKereta == "" || JenisKereta == "" || IDKereta == "")
+            {
+                MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "UPDATE dbo.Kereta SET nm_kereta = @nm_kereta, jns_kereta = @jns_kereta WHERE id_kereta = @id_kereta";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@nm_kereta", NamaKereta));
+                cmd.Parameters.Add(new SqlParameter("@jns_kereta", JenisKereta));
+                cmd.Parameters.Add(new SqlParameter("@id_kereta", IDKereta));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Diupdate", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
+
+        private void DeleteData()
+        {
+            string IDKereta = tbxIDKereta.Text;
+
+            if (IDKereta == "")
+            {
+                MessageBox.Show("Masukkan ID Kereta", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus data?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Kereta WHERE id_kereta = @id_kereta";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_kereta", IDKereta));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteData();
         }
     }
 }

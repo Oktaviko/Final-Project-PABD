@@ -48,6 +48,8 @@
             this.idkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jnskeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idstasiunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).BeginInit();
@@ -218,11 +220,33 @@
             this.idstasiunDataGridViewTextBoxColumn.Name = "idstasiunDataGridViewTextBoxColumn";
             this.idstasiunDataGridViewTextBoxColumn.Width = 125;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(533, 254);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(533, 355);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormDataKereta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbxNamaKereta);
             this.Controls.Add(this.cbxJenisKereta);
             this.Controls.Add(this.tbxIDKereta);
@@ -267,5 +291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idkeretaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jnskeretaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idstasiunDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
