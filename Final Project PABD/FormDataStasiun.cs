@@ -14,9 +14,9 @@ namespace Final_Project_PABD
 {
     public partial class FormDataStasiun : Form
     {
-        private string stringconnection = "";
+        private string stringconnection = "data source=LAPTOP-NAUFALAS\\NAUFALAS;" + "database=FinalPABD;user ID=sa;password=bahtera1234";
         private SqlConnection koneksi;
-        
+
         public FormDataStasiun()
         {
             InitializeComponent();

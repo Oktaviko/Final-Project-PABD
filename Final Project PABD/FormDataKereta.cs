@@ -138,7 +138,7 @@ namespace Final_Project_PABD
         {
             refreshform();
         }
-
+         
 
         private void DeleteData()
         {
@@ -146,7 +146,7 @@ namespace Final_Project_PABD
 
             if (IDKereta == "")
             {
-                MessageBox.Show("Masukkan ID Kereta", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Masukkan ID Kereta yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
