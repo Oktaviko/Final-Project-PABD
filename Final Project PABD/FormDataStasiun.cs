@@ -87,5 +87,16 @@ namespace Final_Project_PABD
         {
             refreshform();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            koneksi.Open();
+            string str = "SELECT * From dbo.Stasiun";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
     }
 }
