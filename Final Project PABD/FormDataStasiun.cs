@@ -82,5 +82,10 @@ namespace Final_Project_PABD
             btnAdd.Enabled = false;
         
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
