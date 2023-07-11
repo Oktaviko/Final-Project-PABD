@@ -102,6 +102,9 @@ namespace Final_Project_PABD
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+            no_hape();
+            id_tikett();
+            nikk();
             
         }
         private void dataGridView1_CellContentClick()
@@ -149,6 +152,48 @@ namespace Final_Project_PABD
         private void btnDelete_Click(object sender, EventArgs e)
         {
             HapusData();
+        }
+        private void id_tikett()
+        {
+            koneksi.Open();
+            string str = "select id_tiket from dbo.Tiket";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxIDTiket.DisplayMember = "id_tiket";
+            cbxIDTiket.ValueMember = "id_tiket";
+            cbxIDTiket.DataSource = ds.Tables[0];
+        }
+        private void nikk()
+        {
+            koneksi.Open();
+            string str = "select nik from dbo.Pelanggan";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxNIK.DisplayMember = "nik";
+            cbxNIK.ValueMember = "nik";
+            cbxNIK.DataSource = ds.Tables[0];
+        }
+        private void no_hape()
+        {
+            koneksi.Open();
+            string str = "select no_hp from dbo.Pelanggan";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxNohp.DisplayMember = "no_hp";
+            cbxNohp.ValueMember = "no_hp";
+            cbxNohp.DataSource = ds.Tables[0];
         }
     }
 }
