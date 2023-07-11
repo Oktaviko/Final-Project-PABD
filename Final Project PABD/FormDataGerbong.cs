@@ -45,16 +45,12 @@ namespace Final_Project_PABD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            txtNO.Text = "";
-            cbxKls.Text = "";
-            txtKps.Text = "";
-            txtID.Enabled =true;
-            txtKps.Enabled =true;
-            cbxKls.Enabled =true;
+            txtID.Enabled = true;
             txtNO.Enabled = true;
-            btnSave.Enabled = true;
+            txtKps.Enabled = true;
+            cbxKls.Enabled = true;
             btnClear.Enabled = true;
+            btnSave.Enabled = true;
             btnAdd.Enabled = false;
         }
 
