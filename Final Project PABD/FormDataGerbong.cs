@@ -193,5 +193,93 @@ namespace Final_Project_PABD
         {
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_gerbong"].Value.ToString();
+            string nogerbong = txtNO.Text;
+            string kelas = cbxKls.Text;
+            string kapasitas = txtKps.Text;
+            string idkereta = cbxIDKreta.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("Id Gerbong tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nogerbong == "")
+            {
+                MessageBox.Show("Masukkan No Gerbong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (kelas == "")
+            {
+                MessageBox.Show("Masukkan Kelas ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (kapasitas == "")
+            {
+                MessageBox.Show("Masukkan Kapasitas Gerbong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idkereta == "")
+            {
+                MessageBox.Show("Masukkan Id kereta", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE gerbong SET no_gerbong = @no_gerbong, kelas = @kelas, kapasitas = @kapasitas, id_kereta = @id_kereta WHERE id_gerbong = @id_gerbong";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_gerbong", id);
+                command.Parameters.AddWithValue("@no_gerbong", nogerbong);
+                command.Parameters.AddWithValue("@kelas", kelas);
+                command.Parameters.AddWithValue("@kapasitas", kapasitas);
+                command.Parameters.AddWithValue("@id_kereta", idkereta);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        GetDataFromDatabase();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void txtNO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKps_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxIDKreta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
