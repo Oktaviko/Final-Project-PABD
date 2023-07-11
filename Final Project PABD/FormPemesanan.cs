@@ -195,5 +195,92 @@ namespace Final_Project_PABD
             cbxNohp.ValueMember = "no_hp";
             cbxNohp.DataSource = ds.Tables[0];
         }
+
+        private void tbxIDpesan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxIDTiket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxNIK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxNohp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_pemesanan"].Value.ToString();
+            string idtiket = cbxIDTiket.Text;
+            string nik = cbxNIK.Text;
+            string nohp = cbxNohp.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("ID Pemesanan tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idtiket == "")
+            {
+                MessageBox.Show("Masukkan ID Tiket", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nik == "")
+            {
+                MessageBox.Show("Masukkan NIK", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nohp == "")
+            {
+                MessageBox.Show("Masukkan No Telepon", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            string sql = "UPDATE pemesanan SET id_tiket = @id_tiket, nik = @nik, no_hp = @no_hp WHERE id_pemesanan = @id_pemesanan";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_pemesanan", id);
+                command.Parameters.AddWithValue("@id_tiket", idtiket);
+                command.Parameters.AddWithValue("@nik", nik);
+                command.Parameters.AddWithValue("@no_hp", nohp);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform(); 
+                        GetDataFromDatabase(); 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+        }
     }
 }

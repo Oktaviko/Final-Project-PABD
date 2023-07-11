@@ -43,6 +43,7 @@
             this.cbxNIK = new System.Windows.Forms.ComboBox();
             this.cbxIDTiket = new System.Windows.Forms.ComboBox();
             this.tbxIDpesan = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,6 +160,7 @@
             this.cbxNohp.Name = "cbxNohp";
             this.cbxNohp.Size = new System.Drawing.Size(121, 24);
             this.cbxNohp.TabIndex = 11;
+            this.cbxNohp.SelectedIndexChanged += new System.EventHandler(this.cbxNohp_SelectedIndexChanged);
             // 
             // cbxNIK
             // 
@@ -167,6 +169,7 @@
             this.cbxNIK.Name = "cbxNIK";
             this.cbxNIK.Size = new System.Drawing.Size(121, 24);
             this.cbxNIK.TabIndex = 12;
+            this.cbxNIK.SelectedIndexChanged += new System.EventHandler(this.cbxNIK_SelectedIndexChanged);
             // 
             // cbxIDTiket
             // 
@@ -175,6 +178,7 @@
             this.cbxIDTiket.Name = "cbxIDTiket";
             this.cbxIDTiket.Size = new System.Drawing.Size(121, 24);
             this.cbxIDTiket.TabIndex = 13;
+            this.cbxIDTiket.SelectedIndexChanged += new System.EventHandler(this.cbxIDTiket_SelectedIndexChanged);
             // 
             // tbxIDpesan
             // 
@@ -182,6 +186,17 @@
             this.tbxIDpesan.Name = "tbxIDpesan";
             this.tbxIDpesan.Size = new System.Drawing.Size(121, 22);
             this.tbxIDpesan.TabIndex = 14;
+            this.tbxIDpesan.TextChanged += new System.EventHandler(this.tbxIDpesan_TextChanged);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(328, 384);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 40);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FormPemesanan
             // 
@@ -189,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbxIDpesan);
             this.Controls.Add(this.cbxIDTiket);
             this.Controls.Add(this.cbxNIK);
@@ -230,5 +246,6 @@
         private System.Windows.Forms.ComboBox cbxNIK;
         private System.Windows.Forms.ComboBox cbxIDTiket;
         private System.Windows.Forms.TextBox tbxIDpesan;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
