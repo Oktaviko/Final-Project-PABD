@@ -171,6 +171,7 @@
             this.Delete.TabIndex = 16;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // FormDataStasiun
             // 

@@ -148,5 +148,10 @@ namespace Final_Project_PABD
                 }
             }
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            HapusData();
+        }
     }
 }
