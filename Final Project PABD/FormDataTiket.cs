@@ -22,6 +22,7 @@ namespace Final_Project_PABD
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringconnection);
+            refreshform();
         }
 
         private void GetDataFromDatabase()
@@ -80,7 +81,14 @@ namespace Final_Project_PABD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            tbxIDTiket.Enabled = true;
+            tbxNoKursi.Enabled = true;
+            cbxKeberangkatan.Enabled = true;
+            cbxTujuan.Enabled = true;
+            cbxNamaKereta.Enabled = true;
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+            btnAdd.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
