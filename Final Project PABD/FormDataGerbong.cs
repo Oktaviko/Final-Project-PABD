@@ -14,7 +14,7 @@ namespace Final_Project_PABD
 {
     public partial class FormDataGerbong : Form
     {
-        private string stringconnection = "data source = OKTAVIKO\\YEELZY;database=FinalPABDActiveResultSets=True;User ID = sa; password = 123";
+        private string stringconnection = "data source=LAPTOP-NAUFALAS\\NAUFALAS;" + "database=FinalPABD;user ID=sa;password=bahtera1234";
         private SqlConnection koneksi;
 
         public FormDataGerbong()
@@ -162,6 +162,11 @@ namespace Final_Project_PABD
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteData();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
