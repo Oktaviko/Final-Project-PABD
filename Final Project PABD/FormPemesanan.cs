@@ -46,5 +46,21 @@ namespace Final_Project_PABD
         {
 
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            GetDataFromDatabase(); // Memanggil method untuk mengambil data dari database dan mengisi DataGridView
+            btnOpen.Enabled = false;
+        }
+        private void GetDataFromDatabase()
+        {
+            koneksi.Open();
+            string str = "SELECT * FROM dbo.Pemesanan";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            koneksi.Close();
+        }
     }
 }
