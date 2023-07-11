@@ -114,5 +114,10 @@ namespace Final_Project_PABD
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
