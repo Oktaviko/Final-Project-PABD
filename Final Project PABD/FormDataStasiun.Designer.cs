@@ -34,13 +34,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNm = new System.Windows.Forms.TextBox();
-            this.txtKota = new System.Windows.Forms.TextBox();
             this.txtIdS = new System.Windows.Forms.TextBox();
-            this.txtIdK = new System.Windows.Forms.TextBox();
+            this.txtIdT = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
@@ -96,6 +94,7 @@
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
@@ -106,19 +105,10 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nama Stasiun";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 310);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Kota";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 349);
+            this.label3.Location = new System.Drawing.Point(88, 336);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 8;
@@ -129,9 +119,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(88, 386);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "ID Kereta";
+            this.label4.Text = "ID Tiket";
             // 
             // txtNm
             // 
@@ -140,26 +130,19 @@
             this.txtNm.Size = new System.Drawing.Size(127, 22);
             this.txtNm.TabIndex = 10;
             // 
-            // txtKota
-            // 
-            this.txtKota.Location = new System.Drawing.Point(195, 310);
-            this.txtKota.Name = "txtKota";
-            this.txtKota.Size = new System.Drawing.Size(127, 22);
-            this.txtKota.TabIndex = 11;
-            // 
             // txtIdS
             // 
-            this.txtIdS.Location = new System.Drawing.Point(195, 346);
+            this.txtIdS.Location = new System.Drawing.Point(195, 333);
             this.txtIdS.Name = "txtIdS";
             this.txtIdS.Size = new System.Drawing.Size(127, 22);
             this.txtIdS.TabIndex = 12;
             // 
-            // txtIdK
+            // txtIdT
             // 
-            this.txtIdK.Location = new System.Drawing.Point(195, 386);
-            this.txtIdK.Name = "txtIdK";
-            this.txtIdK.Size = new System.Drawing.Size(127, 22);
-            this.txtIdK.TabIndex = 13;
+            this.txtIdT.Location = new System.Drawing.Point(195, 386);
+            this.txtIdT.Name = "txtIdT";
+            this.txtIdT.Size = new System.Drawing.Size(127, 22);
+            this.txtIdT.TabIndex = 13;
             // 
             // btnBack
             // 
@@ -197,13 +180,11 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtIdK);
+            this.Controls.Add(this.txtIdT);
             this.Controls.Add(this.txtIdS);
-            this.Controls.Add(this.txtKota);
             this.Controls.Add(this.txtNm);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
@@ -227,13 +208,11 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNm;
-        private System.Windows.Forms.TextBox txtKota;
         private System.Windows.Forms.TextBox txtIdS;
-        private System.Windows.Forms.TextBox txtIdK;
+        private System.Windows.Forms.TextBox txtIdT;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Delete;

@@ -27,12 +27,10 @@ namespace Final_Project_PABD
         {
             txtNm.Text = "";
             txtNm.Enabled = true;
-            txtKota.Text = "";
-            txtKota.Enabled = true;
             txtIdS.Text = "";
             txtIdS.Enabled = true;
-            txtIdK.Text = "";
-            txtIdK.Enabled = true;
+            txtIdT.Text = "";
+            txtIdT.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
@@ -74,9 +72,8 @@ namespace Final_Project_PABD
         private void btnAdd_Click(object sender, EventArgs e)
         {
            txtNm.Enabled = true;
-           txtKota.Enabled = true;
             txtIdS.Enabled = true;
-            txtIdK.Enabled = true;
+            txtIdT.Enabled = true;
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
@@ -97,6 +94,33 @@ namespace Final_Project_PABD
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string nm_stasiun = txtNm.Text;
+            string id_stasiun = txtIdS.Text;
+            string id_tiket = txtIdT.Text;
+
+            if (nm_stasiun == "" || id_stasiun == "" || id_tiket == "")
+            {
+                MessageBox.Show("Masukkan semua data", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Stasiun (nm_stasiun, id_stasiun, id_tiket) VALUES (@nm_stasiun, @id_stasiun, @id_tiket)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@nm_stasiun", nm_stasiun));
+                cmd.Parameters.Add(new SqlParameter("@id_stasiun", id_stasiun));
+                cmd.Parameters.Add(new SqlParameter("@id_tiket", id_tiket));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
         }
     }
 }
