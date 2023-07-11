@@ -93,7 +93,43 @@ namespace Final_Project_PABD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string id_tiket = tbxIDTiket.Text;
+            string nm_kereta = cbxNamaKereta.Text;
+            string no_kursi = tbxNoKursi.Text;
+            string tujuan = cbxTujuan.Text;
+            string keberangkatan = cbxKeberangkatan.Text;
 
+            if (id_tiket == "" || nm_kereta == "" || no_kursi == "" || tujuan == "" || keberangkatan == "")
+            {
+                MessageBox.Show("Harap masukkan semua data ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Tiket (id_tiket, nm_kereta, no_kursi, tujuan, keberangkatan) VALUES (@id_tiket, @nm_kereta, @no_kursi, @tujuan, @keberangkatan)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_tiket", id_tiket));
+                cmd.Parameters.Add(new SqlParameter("@nm_kereta", nm_kereta));
+                cmd.Parameters.Add(new SqlParameter("@no_kursi", no_kursi));
+                cmd.Parameters.Add(new SqlParameter("@tujuan", tujuan));
+                cmd.Parameters.Add(new SqlParameter("@keberangkatan", keberangkatan));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView_CellContent();
+                refreshform();
+            }
+        }
+        private void dataGridView_CellContent()
+        {
+            koneksi.Open();
+            string str = "select * From dbo.Tiket";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -103,13 +139,7 @@ namespace Final_Project_PABD
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            koneksi.Open();
-            string str = "select * From dbo.Tiket";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            koneksi.Close();
+            
         }
     }
 }
