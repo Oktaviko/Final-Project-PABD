@@ -29,8 +29,8 @@ namespace Final_Project_PABD
             txtNm.Enabled = true;
             txtIdS.Text = "";
             txtIdS.Enabled = true;
-            txtIdT.Text = "";
-            txtIdT.Enabled = true;
+            cbxTikt.Text = "";
+            cbxTikt.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
@@ -73,10 +73,12 @@ namespace Final_Project_PABD
         {
            txtNm.Enabled = true;
             txtIdS.Enabled = true;
-            txtIdT.Enabled = true;
+            cbxTikt.Enabled = true;
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+            foreignkey();
+
         
         }
 
@@ -100,7 +102,7 @@ namespace Final_Project_PABD
         {
             string nm_stasiun = txtNm.Text;
             string id_stasiun = txtIdS.Text;
-            string id_tiket = txtIdT.Text;
+            string id_tiket = cbxTikt.Text;
 
             if (nm_stasiun == "" || id_stasiun == "" || id_tiket == "")
             {
@@ -152,6 +154,20 @@ namespace Final_Project_PABD
         private void Delete_Click(object sender, EventArgs e)
         {
             HapusData();
+        }
+        private void foreignkey()
+        {
+            koneksi.Open();
+            string str = "select id_tiket, nm_kereta from dbo.Tiket";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxTikt.DisplayMember = "nm_kereta";
+            cbxTikt.ValueMember = "id_tiket";
+            cbxTikt.DataSource = ds.Tables[0];
         }
     }
 }
