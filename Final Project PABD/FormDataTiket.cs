@@ -55,9 +55,7 @@ namespace Final_Project_PABD
 
         private void FormDataTiket_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            koneksi = new SqlConnection(stringconnection);
-            refreshform();
+            
         }
 
 
