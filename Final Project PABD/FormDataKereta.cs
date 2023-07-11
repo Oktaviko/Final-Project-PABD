@@ -22,11 +22,6 @@ namespace Final_Project_PABD
             refreshform();
         }
 
-        private void dataGridView1_CellContentClick()
-        {
-
-        }
-
         private void btnOpen_Click(object sender, EventArgs e)
         {
             dataGridView1_CellContentClick();
@@ -85,6 +80,17 @@ namespace Final_Project_PABD
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+        }
+
+        private void dataGridView1_CellContentClick()
+        {
+            koneksi.Open();
+            string str = "select * From dbo.Kereta";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
     }
 }
