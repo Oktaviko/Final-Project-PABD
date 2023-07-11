@@ -70,5 +70,17 @@ namespace Final_Project_PABD
             HU.Show();
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+           txtNm.Enabled = true;
+           txtKota.Enabled = true;
+            txtIdS.Enabled = true;
+            txtIdK.Enabled = true;
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+            btnAdd.Enabled = false;
+        
+        }
     }
 }
