@@ -40,5 +40,10 @@ namespace Final_Project_PABD
             HU.Show();
             this.Hide();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
