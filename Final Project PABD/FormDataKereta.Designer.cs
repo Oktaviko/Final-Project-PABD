@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nmkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jnskeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idstasiunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keretaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finalPABDDataSet = new Final_Project_PABD.FinalPABDDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,18 +47,11 @@
             this.tbxIDKereta = new System.Windows.Forms.TextBox();
             this.cbxJenisKereta = new System.Windows.Forms.ComboBox();
             this.tbxNamaKereta = new System.Windows.Forms.TextBox();
-            this.finalPABDDataSet = new Final_Project_PABD.FinalPABDDataSet();
-            this.keretaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.keretaTableAdapter = new Final_Project_PABD.FinalPABDDataSetTableAdapters.KeretaTableAdapter();
-            this.nmkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jnskeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idstasiunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -71,6 +70,48 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(438, 182);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nmkeretaDataGridViewTextBoxColumn
+            // 
+            this.nmkeretaDataGridViewTextBoxColumn.DataPropertyName = "nm_kereta";
+            this.nmkeretaDataGridViewTextBoxColumn.HeaderText = "nm_kereta";
+            this.nmkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nmkeretaDataGridViewTextBoxColumn.Name = "nmkeretaDataGridViewTextBoxColumn";
+            this.nmkeretaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idkeretaDataGridViewTextBoxColumn
+            // 
+            this.idkeretaDataGridViewTextBoxColumn.DataPropertyName = "id_kereta";
+            this.idkeretaDataGridViewTextBoxColumn.HeaderText = "id_kereta";
+            this.idkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idkeretaDataGridViewTextBoxColumn.Name = "idkeretaDataGridViewTextBoxColumn";
+            this.idkeretaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // jnskeretaDataGridViewTextBoxColumn
+            // 
+            this.jnskeretaDataGridViewTextBoxColumn.DataPropertyName = "jns_kereta";
+            this.jnskeretaDataGridViewTextBoxColumn.HeaderText = "jns_kereta";
+            this.jnskeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jnskeretaDataGridViewTextBoxColumn.Name = "jnskeretaDataGridViewTextBoxColumn";
+            this.jnskeretaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idstasiunDataGridViewTextBoxColumn
+            // 
+            this.idstasiunDataGridViewTextBoxColumn.DataPropertyName = "id_stasiun";
+            this.idstasiunDataGridViewTextBoxColumn.HeaderText = "id_stasiun";
+            this.idstasiunDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idstasiunDataGridViewTextBoxColumn.Name = "idstasiunDataGridViewTextBoxColumn";
+            this.idstasiunDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // keretaBindingSource
+            // 
+            this.keretaBindingSource.DataMember = "Kereta";
+            this.keretaBindingSource.DataSource = this.finalPABDDataSet;
+            // 
+            // finalPABDDataSet
+            // 
+            this.finalPABDDataSet.DataSetName = "FinalPABDDataSet";
+            this.finalPABDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -101,7 +142,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(313, 339);
+            this.btnClear.Location = new System.Drawing.Point(322, 306);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 34);
             this.btnClear.TabIndex = 4;
@@ -121,7 +162,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(313, 260);
+            this.btnAdd.Location = new System.Drawing.Point(232, 397);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 34);
             this.btnAdd.TabIndex = 6;
@@ -131,7 +172,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(313, 300);
+            this.btnSave.Location = new System.Drawing.Point(322, 254);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 34);
             this.btnSave.TabIndex = 7;
@@ -174,67 +215,15 @@
             this.tbxNamaKereta.TabIndex = 12;
             this.tbxNamaKereta.TextChanged += new System.EventHandler(this.tbxNamaKereta_TextChanged);
             // 
-            // finalPABDDataSet
-            // 
-            this.finalPABDDataSet.DataSetName = "FinalPABDDataSet";
-            this.finalPABDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // keretaBindingSource
-            // 
-            this.keretaBindingSource.DataMember = "Kereta";
-            this.keretaBindingSource.DataSource = this.finalPABDDataSet;
-            // 
             // keretaTableAdapter
             // 
             this.keretaTableAdapter.ClearBeforeFill = true;
             // 
-            // nmkeretaDataGridViewTextBoxColumn
-            // 
-            this.nmkeretaDataGridViewTextBoxColumn.DataPropertyName = "nm_kereta";
-            this.nmkeretaDataGridViewTextBoxColumn.HeaderText = "nm_kereta";
-            this.nmkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nmkeretaDataGridViewTextBoxColumn.Name = "nmkeretaDataGridViewTextBoxColumn";
-            this.nmkeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idkeretaDataGridViewTextBoxColumn
-            // 
-            this.idkeretaDataGridViewTextBoxColumn.DataPropertyName = "id_kereta";
-            this.idkeretaDataGridViewTextBoxColumn.HeaderText = "id_kereta";
-            this.idkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idkeretaDataGridViewTextBoxColumn.Name = "idkeretaDataGridViewTextBoxColumn";
-            this.idkeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jnskeretaDataGridViewTextBoxColumn
-            // 
-            this.jnskeretaDataGridViewTextBoxColumn.DataPropertyName = "jns_kereta";
-            this.jnskeretaDataGridViewTextBoxColumn.HeaderText = "jns_kereta";
-            this.jnskeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jnskeretaDataGridViewTextBoxColumn.Name = "jnskeretaDataGridViewTextBoxColumn";
-            this.jnskeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idstasiunDataGridViewTextBoxColumn
-            // 
-            this.idstasiunDataGridViewTextBoxColumn.DataPropertyName = "id_stasiun";
-            this.idstasiunDataGridViewTextBoxColumn.HeaderText = "id_stasiun";
-            this.idstasiunDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idstasiunDataGridViewTextBoxColumn.Name = "idstasiunDataGridViewTextBoxColumn";
-            this.idstasiunDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(533, 254);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(533, 355);
+            this.btnDelete.Location = new System.Drawing.Point(123, 397);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(75, 34);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -246,7 +235,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbxNamaKereta);
             this.Controls.Add(this.cbxJenisKereta);
             this.Controls.Add(this.tbxIDKereta);
@@ -263,8 +251,8 @@
             this.Text = "FormDataKereta";
             this.Load += new System.EventHandler(this.FormDataKereta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +279,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idkeretaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jnskeretaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idstasiunDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -33,6 +33,10 @@ namespace Final_Project_PABD
             // TODO: This line of code loads data into the 'finalPABDDataSet.Kereta' table. You can move, or remove it, as needed.
             this.keretaTableAdapter.Fill(this.finalPABDDataSet.Kereta);
 
+            cbxJenisKereta.Items.Add("KRL");
+            cbxJenisKereta.Items.Add("KAJJ");
+            cbxJenisKereta.Items.Add("KL");
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -123,32 +127,6 @@ namespace Final_Project_PABD
             refreshform();
         }
 
-        private void UpdateData()
-        {
-            string NamaKereta = tbxNamaKereta.Text;
-            string JenisKereta = cbxJenisKereta.Text;
-            string IDKereta = tbxIDKereta.Text;
-
-            if (NamaKereta == "" || JenisKereta == "" || IDKereta == "")
-            {
-                MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                koneksi.Open();
-                string str = "UPDATE dbo.Kereta SET nm_kereta = @nm_kereta, jns_kereta = @jns_kereta WHERE id_kereta = @id_kereta";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@nm_kereta", NamaKereta));
-                cmd.Parameters.Add(new SqlParameter("@jns_kereta", JenisKereta));
-                cmd.Parameters.Add(new SqlParameter("@id_kereta", IDKereta));
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Berhasil Diupdate", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                koneksi.Close();
-                dataGridView1_CellContentClick();
-                refreshform();
-            }
-        }
 
         private void DeleteData()
         {
@@ -177,10 +155,6 @@ namespace Final_Project_PABD
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            UpdateData();
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
