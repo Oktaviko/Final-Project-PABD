@@ -123,6 +123,7 @@ namespace Final_Project_PABD
             tbxNamaKereta.Enabled = true;
             tbxIDKereta.Enabled=true;
             cbxJenisKereta .Enabled = true;
+            cbxIDStasiun .Enabled = true;
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
