@@ -27,6 +27,10 @@ namespace Final_Project_PABD
         {
             txtNm.Text = "";
             txtNm.Enabled = true;
+            tbxKbr.Text = "";
+            tbxKbr.Enabled = true;
+            tbxTujuan.Text = "";
+            tbxTujuan.Enabled = true;
             txtIdS.Text = "";
             txtIdS.Enabled = true;
             cbxTikt.Text = "";
@@ -72,6 +76,8 @@ namespace Final_Project_PABD
         private void btnAdd_Click(object sender, EventArgs e)
         {
            txtNm.Enabled = true;
+            tbxTujuan.Enabled = true;
+            tbxKbr.Enabled = true;
             txtIdS.Enabled = true;
             cbxTikt.Enabled = true;
             btnClear.Enabled = true;
@@ -103,20 +109,24 @@ namespace Final_Project_PABD
             string nm_stasiun = txtNm.Text;
             string id_stasiun = txtIdS.Text;
             string id_tiket = cbxTikt.Text;
+            string tujuan = tbxTujuan.Text;
+            string keberangkatan = tbxKbr.Text;
 
-            if (nm_stasiun == "" || id_stasiun == "" || id_tiket == "")
+            if (nm_stasiun == "" || id_stasiun == "" || id_tiket == "" || tujuan == "" || keberangkatan == "")
             {
                 MessageBox.Show("Masukkan semua data", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Stasiun (nm_stasiun, id_stasiun, id_tiket) VALUES (@nm_stasiun, @id_stasiun, @id_tiket)";
+                string str = "insert into dbo.Stasiun (nm_stasiun, id_stasiun, id_tiket, tujuan, keberangkatan) VALUES (@nm_stasiun, @id_stasiun, @id_tiket, @tujuan, @keberangkatan)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@nm_stasiun", nm_stasiun));
                 cmd.Parameters.Add(new SqlParameter("@id_stasiun", id_stasiun));
                 cmd.Parameters.Add(new SqlParameter("@id_tiket", id_tiket));
+                cmd.Parameters.Add(new SqlParameter("@tujuan", tujuan));
+                cmd.Parameters.Add(new SqlParameter("@keberangkatan", keberangkatan));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();

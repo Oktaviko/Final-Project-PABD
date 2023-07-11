@@ -41,6 +41,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.cbxTikt = new System.Windows.Forms.ComboBox();
+            this.tbxTujuan = new System.Windows.Forms.TextBox();
+            this.tbxKbr = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +81,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(357, 269);
+            this.btnClear.Location = new System.Drawing.Point(341, 388);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 39);
             this.btnClear.TabIndex = 3;
@@ -87,7 +91,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(357, 321);
+            this.btnSave.Location = new System.Drawing.Point(466, 388);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 39);
             this.btnSave.TabIndex = 4;
@@ -107,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 292);
+            this.label3.Location = new System.Drawing.Point(69, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 8;
@@ -116,7 +120,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 344);
+            this.label4.Location = new System.Drawing.Point(69, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 9;
@@ -131,7 +135,7 @@
             // 
             // txtIdS
             // 
-            this.txtIdS.Location = new System.Drawing.Point(176, 290);
+            this.txtIdS.Location = new System.Drawing.Point(176, 274);
             this.txtIdS.Name = "txtIdS";
             this.txtIdS.Size = new System.Drawing.Size(127, 22);
             this.txtIdS.TabIndex = 12;
@@ -159,10 +163,42 @@
             // cbxTikt
             // 
             this.cbxTikt.FormattingEnabled = true;
-            this.cbxTikt.Location = new System.Drawing.Point(176, 341);
+            this.cbxTikt.Location = new System.Drawing.Point(176, 313);
             this.cbxTikt.Name = "cbxTikt";
             this.cbxTikt.Size = new System.Drawing.Size(127, 24);
             this.cbxTikt.TabIndex = 17;
+            // 
+            // tbxTujuan
+            // 
+            this.tbxTujuan.Location = new System.Drawing.Point(481, 240);
+            this.tbxTujuan.Name = "tbxTujuan";
+            this.tbxTujuan.Size = new System.Drawing.Size(127, 22);
+            this.tbxTujuan.TabIndex = 18;
+            // 
+            // tbxKbr
+            // 
+            this.tbxKbr.Location = new System.Drawing.Point(481, 280);
+            this.tbxKbr.Name = "tbxKbr";
+            this.tbxKbr.Size = new System.Drawing.Size(127, 22);
+            this.tbxKbr.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(410, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Tujuan";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(359, 283);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 16);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Keberangkatan";
             // 
             // FormDataStasiun
             // 
@@ -170,6 +206,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbxKbr);
+            this.Controls.Add(this.tbxTujuan);
             this.Controls.Add(this.cbxTikt);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnBack);
@@ -207,5 +247,9 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.ComboBox cbxTikt;
+        private System.Windows.Forms.TextBox tbxTujuan;
+        private System.Windows.Forms.TextBox tbxKbr;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }
