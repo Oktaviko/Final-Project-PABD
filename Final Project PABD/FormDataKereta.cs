@@ -76,5 +76,15 @@ namespace Final_Project_PABD
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            tbxNamaKereta.Enabled = true;
+            tbxIDKereta.Enabled=true;
+            cbxJenisKereta .Enabled = true;
+            btnClear.Enabled = true;
+            btnSave.Enabled = true;
+            btnAdd.Enabled = false;
+        }
     }
 }
