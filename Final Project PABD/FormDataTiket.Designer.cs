@@ -36,14 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxNoKursi = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxKeberangkatan = new System.Windows.Forms.ComboBox();
+            this.cbxTujuan = new System.Windows.Forms.ComboBox();
+            this.tbxIDTiket = new System.Windows.Forms.TextBox();
+            this.cbxNamaKereta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,12 +122,12 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "No Kursi";
             // 
-            // textBox2
+            // tbxNoKursi
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 416);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 19;
+            this.tbxNoKursi.Location = new System.Drawing.Point(238, 416);
+            this.tbxNoKursi.Name = "tbxNoKursi";
+            this.tbxNoKursi.Size = new System.Drawing.Size(121, 22);
+            this.tbxNoKursi.TabIndex = 19;
             // 
             // btnAdd
             // 
@@ -137,6 +137,7 @@
             this.btnAdd.TabIndex = 20;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
@@ -146,6 +147,7 @@
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -155,52 +157,53 @@
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // comboBox1
+            // cbxKeberangkatan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(238, 371);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 23;
+            this.cbxKeberangkatan.FormattingEnabled = true;
+            this.cbxKeberangkatan.Location = new System.Drawing.Point(238, 371);
+            this.cbxKeberangkatan.Name = "cbxKeberangkatan";
+            this.cbxKeberangkatan.Size = new System.Drawing.Size(121, 24);
+            this.cbxKeberangkatan.TabIndex = 23;
             // 
-            // comboBox2
+            // cbxTujuan
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 332);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 24;
+            this.cbxTujuan.FormattingEnabled = true;
+            this.cbxTujuan.Location = new System.Drawing.Point(238, 332);
+            this.cbxTujuan.Name = "cbxTujuan";
+            this.cbxTujuan.Size = new System.Drawing.Size(121, 24);
+            this.cbxTujuan.TabIndex = 24;
             // 
-            // textBox1
+            // tbxIDTiket
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxIDTiket.Location = new System.Drawing.Point(238, 254);
+            this.tbxIDTiket.Name = "tbxIDTiket";
+            this.tbxIDTiket.Size = new System.Drawing.Size(121, 22);
+            this.tbxIDTiket.TabIndex = 25;
+            this.tbxIDTiket.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // comboBox3
+            // cbxNamaKereta
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(238, 297);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 26;
+            this.cbxNamaKereta.FormattingEnabled = true;
+            this.cbxNamaKereta.Location = new System.Drawing.Point(238, 297);
+            this.cbxNamaKereta.Name = "cbxNamaKereta";
+            this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
+            this.cbxNamaKereta.TabIndex = 26;
             // 
             // FormDataTiket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 499);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxNamaKereta);
+            this.Controls.Add(this.tbxIDTiket);
+            this.Controls.Add(this.cbxTujuan);
+            this.Controls.Add(this.cbxKeberangkatan);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbxNoKursi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -228,13 +231,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxNoKursi;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxKeberangkatan;
+        private System.Windows.Forms.ComboBox cbxTujuan;
+        private System.Windows.Forms.TextBox tbxIDTiket;
+        private System.Windows.Forms.ComboBox cbxNamaKereta;
     }
 }
