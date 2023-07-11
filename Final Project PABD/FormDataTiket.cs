@@ -87,6 +87,9 @@ namespace Final_Project_PABD
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
+            namakereta();
+            tjn();
+            kbrangktn();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
