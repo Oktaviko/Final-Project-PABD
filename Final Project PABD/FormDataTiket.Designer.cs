@@ -81,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 257);
+            this.label1.Location = new System.Drawing.Point(72, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 13;
@@ -90,7 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 379);
+            this.label2.Location = new System.Drawing.Point(72, 347);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 14;
@@ -99,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 340);
+            this.label3.Location = new System.Drawing.Point(72, 308);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 15;
@@ -108,7 +108,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 297);
+            this.label4.Location = new System.Drawing.Point(73, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 16;
@@ -117,7 +117,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 422);
+            this.label5.Location = new System.Drawing.Point(73, 390);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 17;
@@ -125,7 +125,7 @@
             // 
             // tbxNoKursi
             // 
-            this.tbxNoKursi.Location = new System.Drawing.Point(238, 416);
+            this.tbxNoKursi.Location = new System.Drawing.Point(236, 384);
             this.tbxNoKursi.Name = "tbxNoKursi";
             this.tbxNoKursi.Size = new System.Drawing.Size(121, 22);
             this.tbxNoKursi.TabIndex = 19;
@@ -163,7 +163,7 @@
             // cbxKeberangkatan
             // 
             this.cbxKeberangkatan.FormattingEnabled = true;
-            this.cbxKeberangkatan.Location = new System.Drawing.Point(238, 371);
+            this.cbxKeberangkatan.Location = new System.Drawing.Point(236, 339);
             this.cbxKeberangkatan.Name = "cbxKeberangkatan";
             this.cbxKeberangkatan.Size = new System.Drawing.Size(121, 24);
             this.cbxKeberangkatan.TabIndex = 23;
@@ -171,14 +171,14 @@
             // cbxTujuan
             // 
             this.cbxTujuan.FormattingEnabled = true;
-            this.cbxTujuan.Location = new System.Drawing.Point(238, 332);
+            this.cbxTujuan.Location = new System.Drawing.Point(236, 300);
             this.cbxTujuan.Name = "cbxTujuan";
             this.cbxTujuan.Size = new System.Drawing.Size(121, 24);
             this.cbxTujuan.TabIndex = 24;
             // 
             // tbxIDTiket
             // 
-            this.tbxIDTiket.Location = new System.Drawing.Point(238, 254);
+            this.tbxIDTiket.Location = new System.Drawing.Point(236, 222);
             this.tbxIDTiket.Name = "tbxIDTiket";
             this.tbxIDTiket.Size = new System.Drawing.Size(121, 22);
             this.tbxIDTiket.TabIndex = 25;
@@ -187,7 +187,7 @@
             // cbxNamaKereta
             // 
             this.cbxNamaKereta.FormattingEnabled = true;
-            this.cbxNamaKereta.Location = new System.Drawing.Point(238, 297);
+            this.cbxNamaKereta.Location = new System.Drawing.Point(236, 265);
             this.cbxNamaKereta.Name = "cbxNamaKereta";
             this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxNamaKereta.TabIndex = 26;

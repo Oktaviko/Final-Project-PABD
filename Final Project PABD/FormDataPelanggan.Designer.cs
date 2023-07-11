@@ -59,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 257);
+            this.label1.Location = new System.Drawing.Point(94, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 296);
+            this.label2.Location = new System.Drawing.Point(94, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 16);
             this.label2.TabIndex = 2;
@@ -77,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 334);
+            this.label3.Location = new System.Drawing.Point(94, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 3;
@@ -86,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 370);
+            this.label4.Location = new System.Drawing.Point(94, 359);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(394, 241);
+            this.btnAdd.Location = new System.Drawing.Point(107, 396);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 42);
             this.btnAdd.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(394, 308);
+            this.btnClear.Location = new System.Drawing.Point(373, 269);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(79, 42);
             this.btnClear.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(394, 370);
+            this.btnSave.Location = new System.Drawing.Point(373, 343);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 42);
             this.btnSave.TabIndex = 8;
@@ -144,9 +144,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(519, 308);
+            this.button1.Location = new System.Drawing.Point(223, 396);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 43);
+            this.button1.Size = new System.Drawing.Size(79, 42);
             this.button1.TabIndex = 10;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -154,28 +154,28 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(193, 251);
+            this.txtNama.Location = new System.Drawing.Point(190, 240);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(130, 22);
             this.txtNama.TabIndex = 11;
             // 
             // txtNohp
             // 
-            this.txtNohp.Location = new System.Drawing.Point(193, 364);
+            this.txtNohp.Location = new System.Drawing.Point(190, 353);
             this.txtNohp.Name = "txtNohp";
             this.txtNohp.Size = new System.Drawing.Size(130, 22);
             this.txtNohp.TabIndex = 12;
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(193, 328);
+            this.txtAlamat.Location = new System.Drawing.Point(190, 317);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(130, 22);
             this.txtAlamat.TabIndex = 13;
             // 
             // txtNIK
             // 
-            this.txtNIK.Location = new System.Drawing.Point(193, 290);
+            this.txtNIK.Location = new System.Drawing.Point(190, 279);
             this.txtNIK.Name = "txtNIK";
             this.txtNIK.Size = new System.Drawing.Size(130, 22);
             this.txtNIK.TabIndex = 14;

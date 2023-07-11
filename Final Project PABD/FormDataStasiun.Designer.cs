@@ -67,7 +67,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(371, 267);
+            this.btnAdd.Location = new System.Drawing.Point(219, 388);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 39);
             this.btnAdd.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(371, 326);
+            this.btnClear.Location = new System.Drawing.Point(357, 269);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 39);
             this.btnClear.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(371, 378);
+            this.btnSave.Location = new System.Drawing.Point(357, 321);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 39);
             this.btnSave.TabIndex = 4;
@@ -98,7 +98,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 274);
+            this.label1.Location = new System.Drawing.Point(69, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 6;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 326);
+            this.label3.Location = new System.Drawing.Point(69, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 8;
@@ -116,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 378);
+            this.label4.Location = new System.Drawing.Point(69, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 9;
@@ -124,14 +124,14 @@
             // 
             // txtNm
             // 
-            this.txtNm.Location = new System.Drawing.Point(195, 272);
+            this.txtNm.Location = new System.Drawing.Point(176, 240);
             this.txtNm.Name = "txtNm";
             this.txtNm.Size = new System.Drawing.Size(127, 22);
             this.txtNm.TabIndex = 10;
             // 
             // txtIdS
             // 
-            this.txtIdS.Location = new System.Drawing.Point(195, 324);
+            this.txtIdS.Location = new System.Drawing.Point(176, 290);
             this.txtIdS.Name = "txtIdS";
             this.txtIdS.Size = new System.Drawing.Size(127, 22);
             this.txtIdS.TabIndex = 12;
@@ -148,7 +148,7 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(564, 324);
+            this.Delete.Location = new System.Drawing.Point(88, 388);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(84, 41);
             this.Delete.TabIndex = 16;
@@ -159,9 +159,9 @@
             // cbxTikt
             // 
             this.cbxTikt.FormattingEnabled = true;
-            this.cbxTikt.Location = new System.Drawing.Point(201, 375);
+            this.cbxTikt.Location = new System.Drawing.Point(176, 341);
             this.cbxTikt.Name = "cbxTikt";
-            this.cbxTikt.Size = new System.Drawing.Size(121, 24);
+            this.cbxTikt.Size = new System.Drawing.Size(127, 24);
             this.cbxTikt.TabIndex = 17;
             // 
             // FormDataStasiun
