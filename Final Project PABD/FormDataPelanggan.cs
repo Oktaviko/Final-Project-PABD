@@ -126,7 +126,7 @@ namespace Final_Project_PABD
             string NIK = txtNIK.Text;
             if (NIK == "" )
             {
-                MessageBox.Show("Masukkan NIK Anda !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Masukkan NIK yang ingin dihapus!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
