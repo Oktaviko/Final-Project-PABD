@@ -38,10 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNm = new System.Windows.Forms.TextBox();
             this.txtIdS = new System.Windows.Forms.TextBox();
+            this.txtIdT = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.cbxTikt = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,6 +137,13 @@
             this.txtIdS.Size = new System.Drawing.Size(127, 22);
             this.txtIdS.TabIndex = 12;
             // 
+            // txtIdT
+            // 
+            this.txtIdT.Location = new System.Drawing.Point(195, 386);
+            this.txtIdT.Name = "txtIdT";
+            this.txtIdT.Size = new System.Drawing.Size(127, 22);
+            this.txtIdT.TabIndex = 13;
+            // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(713, 404);
@@ -166,23 +173,15 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // cbxTikt
-            // 
-            this.cbxTikt.FormattingEnabled = true;
-            this.cbxTikt.Location = new System.Drawing.Point(195, 383);
-            this.cbxTikt.Name = "cbxTikt";
-            this.cbxTikt.Size = new System.Drawing.Size(121, 24);
-            this.cbxTikt.TabIndex = 17;
-            // 
             // FormDataStasiun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbxTikt);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.txtIdT);
             this.Controls.Add(this.txtIdS);
             this.Controls.Add(this.txtNm);
             this.Controls.Add(this.label4);
@@ -214,9 +213,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNm;
         private System.Windows.Forms.TextBox txtIdS;
+        private System.Windows.Forms.TextBox txtIdT;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.ComboBox cbxTikt;
     }
 }
