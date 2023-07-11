@@ -136,6 +136,48 @@ namespace Final_Project_PABD
         {
             refreshform();
         }
+        private void namakereta()
+        {
+            koneksi.Open();
+            string str = "select nm_kereta from dbo.Kereta";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxNamaKereta.DisplayMember = "nm_kereta";
+            cbxNamaKereta.ValueMember = "nm_kereta";
+            cbxNamaKereta.DataSource = ds.Tables[0];
+        }
+        private void tjn()
+        {
+            koneksi.Open();
+            string str = "select tujuan from dbo.Stasiun";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxTujuan.DisplayMember = "tujuan";
+            cbxTujuan.ValueMember = "tujuan";
+            cbxTujuan.DataSource = ds.Tables[0];
+        }
+        private void kbrangktn()
+        {
+            koneksi.Open();
+            string str = "select keberangkatan from dbo.Stasiun";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxKeberangkatan.DisplayMember = "tujuan";
+            cbxKeberangkatan.ValueMember = "tujuan";
+            cbxKeberangkatan.DataSource = ds.Tables[0];
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
