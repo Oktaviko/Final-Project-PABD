@@ -175,8 +175,8 @@ namespace Final_Project_PABD
             da.Fill(ds);
             cmd.ExecuteReader();
             koneksi.Close();
-            cbxKeberangkatan.DisplayMember = "tujuan";
-            cbxKeberangkatan.ValueMember = "tujuan";
+            cbxKeberangkatan.DisplayMember = "keberangkatan";
+            cbxKeberangkatan.ValueMember = "keberangkatan";
             cbxKeberangkatan.DataSource = ds.Tables[0];
         }
 
