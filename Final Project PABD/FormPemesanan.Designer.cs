@@ -30,8 +30,8 @@
         {
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxNohp = new System.Windows.Forms.ComboBox();
+            this.cbxNIK = new System.Windows.Forms.ComboBox();
+            this.cbxIDTiket = new System.Windows.Forms.ComboBox();
+            this.tbxIDpesan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,23 +64,23 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Location = new System.Drawing.Point(340, 312);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(340, 312);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(76, 40);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnClear
             // 
-            this.button4.Location = new System.Drawing.Point(340, 252);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(340, 252);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(76, 40);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
@@ -147,46 +147,46 @@
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxNohp
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(189, 341);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 11;
+            this.cbxNohp.FormattingEnabled = true;
+            this.cbxNohp.Location = new System.Drawing.Point(189, 341);
+            this.cbxNohp.Name = "cbxNohp";
+            this.cbxNohp.Size = new System.Drawing.Size(121, 24);
+            this.cbxNohp.TabIndex = 11;
             // 
-            // comboBox2
+            // cbxNIK
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 306);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 12;
+            this.cbxNIK.FormattingEnabled = true;
+            this.cbxNIK.Location = new System.Drawing.Point(189, 306);
+            this.cbxNIK.Name = "cbxNIK";
+            this.cbxNIK.Size = new System.Drawing.Size(121, 24);
+            this.cbxNIK.TabIndex = 12;
             // 
-            // comboBox3
+            // cbxIDTiket
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(189, 269);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 13;
+            this.cbxIDTiket.FormattingEnabled = true;
+            this.cbxIDTiket.Location = new System.Drawing.Point(189, 269);
+            this.cbxIDTiket.Name = "cbxIDTiket";
+            this.cbxIDTiket.Size = new System.Drawing.Size(121, 24);
+            this.cbxIDTiket.TabIndex = 13;
             // 
-            // textBox1
+            // tbxIDpesan
             // 
-            this.textBox1.Location = new System.Drawing.Point(189, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 14;
+            this.tbxIDpesan.Location = new System.Drawing.Point(189, 238);
+            this.tbxIDpesan.Name = "tbxIDpesan";
+            this.tbxIDpesan.Size = new System.Drawing.Size(121, 22);
+            this.tbxIDpesan.TabIndex = 14;
             // 
             // FormPemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tbxIDpesan);
+            this.Controls.Add(this.cbxIDTiket);
+            this.Controls.Add(this.cbxNIK);
+            this.Controls.Add(this.cbxNohp);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -194,8 +194,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Name = "FormPemesanan";
@@ -211,8 +211,8 @@
 
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
@@ -220,9 +220,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbxNohp;
+        private System.Windows.Forms.ComboBox cbxNIK;
+        private System.Windows.Forms.ComboBox cbxIDTiket;
+        private System.Windows.Forms.TextBox tbxIDpesan;
     }
 }

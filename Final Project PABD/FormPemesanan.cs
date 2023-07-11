@@ -18,8 +18,23 @@ namespace Final_Project_PABD
         public FormPemesanan()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
+            refreshform();
         }
-
+        private void refreshform()
+        {
+            tbxIDpesan.Text = "";
+            tbxIDpesan.Enabled = true;
+            cbxIDTiket.SelectedIndex = -1;
+            cbxIDTiket.Enabled = false;
+            cbxNIK.Enabled = false;
+            cbxNIK.SelectedIndex = -1;
+            cbxNohp.Enabled = false;
+            cbxNohp.SelectedIndex = -1;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
+        }
         private void btnBack_Click(object sender, EventArgs e)
         {
             HalamanUtama HU = new HalamanUtama();
