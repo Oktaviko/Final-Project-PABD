@@ -44,7 +44,7 @@
             this.cbxTujuan = new System.Windows.Forms.ComboBox();
             this.tbxIDTiket = new System.Windows.Forms.TextBox();
             this.cbxNamaKereta = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,14 +193,15 @@
             this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxNamaKereta.TabIndex = 26;
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.Location = new System.Drawing.Point(608, 298);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 47);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(608, 298);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(85, 47);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormDataTiket
             // 
@@ -208,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 499);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxNamaKereta);
             this.Controls.Add(this.tbxIDTiket);
             this.Controls.Add(this.cbxTujuan);
@@ -252,6 +253,6 @@
         private System.Windows.Forms.ComboBox cbxTujuan;
         private System.Windows.Forms.TextBox tbxIDTiket;
         private System.Windows.Forms.ComboBox cbxNamaKereta;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -141,5 +141,35 @@ namespace Final_Project_PABD
         {
             
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            HapusData();
+        }
+        private void HapusData()
+        {
+            string id_tiket = tbxIDTiket.Text;
+            if (id_tiket == "")
+            {
+                MessageBox.Show("Masukkan ID tiket yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus data?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Tiket WHERE id_tiket = @id_tiket";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_tiket", id_tiket));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView_CellContent();
+                    refreshform();
+                }
+            }
+        }
     }
 }
