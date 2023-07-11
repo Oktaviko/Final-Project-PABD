@@ -179,5 +179,97 @@ namespace Final_Project_PABD
             cbxTikt.ValueMember = "id_tiket";
             cbxTikt.DataSource = ds.Tables[0];
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_stasiun"].Value.ToString();
+            string namastasiun = txtNm.Text;
+            string keberangkatan = tbxKbr.Text;
+            string tujuan = tbxTujuan.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("ID Stasiun tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (namastasiun == "")
+            {
+                MessageBox.Show("Masukkan Nama Stasiun", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (keberangkatan == "")
+            {
+                MessageBox.Show("Masukkan Kota Keberangkatan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (tujuan == "")
+            {
+                MessageBox.Show("Masukkan Kota Tujuan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            string sql = "UPDATE stasiun SET nm_stasiun = @nm_stasiun, keberangkatan = @keberangkatan, tujuan = @tujuan WHERE id_stasiun = @id_stasiun";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_stasiun", id);
+                command.Parameters.AddWithValue("@nm_stasiun", namastasiun);
+                command.Parameters.AddWithValue("@keberangkatan", keberangkatan);
+                command.Parameters.AddWithValue("@tujuan", tujuan);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        GetDataFromDatabase();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void tbxTujuan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxKbr_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxTikt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

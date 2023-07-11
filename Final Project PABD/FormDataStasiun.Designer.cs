@@ -45,6 +45,7 @@
             this.tbxKbr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(458, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(458, 152);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -71,9 +72,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(219, 388);
+            this.btnAdd.Location = new System.Drawing.Point(206, 397);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 39);
+            this.btnAdd.Size = new System.Drawing.Size(75, 41);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(341, 388);
+            this.btnClear.Location = new System.Drawing.Point(354, 234);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 39);
             this.btnClear.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(460, 388);
+            this.btnSave.Location = new System.Drawing.Point(354, 292);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 39);
             this.btnSave.TabIndex = 4;
@@ -102,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 242);
+            this.label1.Location = new System.Drawing.Point(60, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 6;
@@ -111,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 280);
+            this.label3.Location = new System.Drawing.Point(60, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 8;
@@ -120,7 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 321);
+            this.label4.Location = new System.Drawing.Point(60, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 9;
@@ -128,17 +129,19 @@
             // 
             // txtNm
             // 
-            this.txtNm.Location = new System.Drawing.Point(176, 240);
+            this.txtNm.Location = new System.Drawing.Point(185, 200);
             this.txtNm.Name = "txtNm";
             this.txtNm.Size = new System.Drawing.Size(127, 22);
             this.txtNm.TabIndex = 10;
+            this.txtNm.TextChanged += new System.EventHandler(this.txtNm_TextChanged);
             // 
             // txtIdS
             // 
-            this.txtIdS.Location = new System.Drawing.Point(176, 274);
+            this.txtIdS.Location = new System.Drawing.Point(185, 234);
             this.txtIdS.Name = "txtIdS";
             this.txtIdS.Size = new System.Drawing.Size(127, 22);
             this.txtIdS.TabIndex = 12;
+            this.txtIdS.TextChanged += new System.EventHandler(this.txtIdS_TextChanged);
             // 
             // btnBack
             // 
@@ -152,9 +155,9 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(88, 388);
+            this.Delete.Location = new System.Drawing.Point(88, 397);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(84, 41);
+            this.Delete.Size = new System.Drawing.Size(79, 41);
             this.Delete.TabIndex = 16;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
@@ -163,29 +166,32 @@
             // cbxTikt
             // 
             this.cbxTikt.FormattingEnabled = true;
-            this.cbxTikt.Location = new System.Drawing.Point(176, 313);
+            this.cbxTikt.Location = new System.Drawing.Point(185, 273);
             this.cbxTikt.Name = "cbxTikt";
             this.cbxTikt.Size = new System.Drawing.Size(127, 24);
             this.cbxTikt.TabIndex = 17;
+            this.cbxTikt.SelectedIndexChanged += new System.EventHandler(this.cbxTikt_SelectedIndexChanged);
             // 
             // tbxTujuan
             // 
-            this.tbxTujuan.Location = new System.Drawing.Point(481, 240);
+            this.tbxTujuan.Location = new System.Drawing.Point(186, 312);
             this.tbxTujuan.Name = "tbxTujuan";
             this.tbxTujuan.Size = new System.Drawing.Size(127, 22);
             this.tbxTujuan.TabIndex = 18;
+            this.tbxTujuan.TextChanged += new System.EventHandler(this.tbxTujuan_TextChanged);
             // 
             // tbxKbr
             // 
-            this.tbxKbr.Location = new System.Drawing.Point(481, 280);
+            this.tbxKbr.Location = new System.Drawing.Point(186, 352);
             this.tbxKbr.Name = "tbxKbr";
             this.tbxKbr.Size = new System.Drawing.Size(127, 22);
             this.tbxKbr.TabIndex = 19;
+            this.tbxKbr.TextChanged += new System.EventHandler(this.tbxKbr_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(410, 240);
+            this.label2.Location = new System.Drawing.Point(60, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 20;
@@ -194,11 +200,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(359, 283);
+            this.label5.Location = new System.Drawing.Point(60, 352);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 21;
             this.label5.Text = "Keberangkatan";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(312, 397);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 41);
+            this.btnUpdate.TabIndex = 22;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FormDataStasiun
             // 
@@ -206,6 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxKbr);
@@ -251,5 +268,6 @@
         private System.Windows.Forms.TextBox tbxKbr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
