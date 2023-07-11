@@ -119,5 +119,36 @@ namespace Final_Project_PABD
         {
             refreshform();
         }
+        private void HapusData()
+        {
+            string id_pemesanan = tbxIDpesan.Text;
+
+            if (id_pemesanan == "")
+            {
+                MessageBox.Show("Masukkan ID pemesanan yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus data?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Pemesanan WHERE id_pemesanan = @id_pemesanan";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_pemesanan", id_pemesanan));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            HapusData();
+        }
     }
 }
