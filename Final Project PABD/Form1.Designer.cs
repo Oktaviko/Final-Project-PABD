@@ -39,6 +39,7 @@
             this.dataTiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataPemesananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,8 @@
             this.dataKeretaToolStripMenuItem,
             this.dataPelangganToolStripMenuItem,
             this.dataGerbongToolStripMenuItem,
-            this.dataTiketToolStripMenuItem});
+            this.dataTiketToolStripMenuItem,
+            this.dataPemesananToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -134,6 +136,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "DATABASE PEMESANAN TIKET KERETA API";
             // 
+            // dataPemesananToolStripMenuItem
+            // 
+            this.dataPemesananToolStripMenuItem.Name = "dataPemesananToolStripMenuItem";
+            this.dataPemesananToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataPemesananToolStripMenuItem.Text = "Data Pemesanan";
+            this.dataPemesananToolStripMenuItem.Click += new System.EventHandler(this.dataPemesananToolStripMenuItem_Click);
+            // 
             // HalamanUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,6 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem dataTiketToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem dataPemesananToolStripMenuItem;
     }
 }
 

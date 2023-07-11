@@ -16,5 +16,12 @@ namespace Final_Project_PABD
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HalamanUtama HU = new HalamanUtama();
+            HU.Show();
+            this.Hide();
+        }
     }
 }
