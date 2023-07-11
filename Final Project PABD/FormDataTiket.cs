@@ -16,9 +16,12 @@ namespace Final_Project_PABD
 
         private string stringconnection = "data source=LAPTOP-NAUFALAS\\NAUFALAS;" + "database=FinalPABD;user ID=sa;password=bahtera1234";
         private SqlConnection koneksi;
+
+
         public FormDataTiket()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringconnection);
         }
 
         private void GetDataFromDatabase()
