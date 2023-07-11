@@ -122,5 +122,31 @@ namespace Final_Project_PABD
                 refreshform();
             }
         }
+        private void HapusData()
+        {
+            string id_stasiun = txtIdS.Text;
+
+            if (id_stasiun == "")
+            {
+                MessageBox.Show("Masukkan ID stasiun yang ingin dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus data?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Stasiun WHERE id_stasiun = @id_stasiun";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("@id_stasiun", id_stasiun));
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil Dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    koneksi.Close();
+                    dataGridView1_CellContentClick();
+                    refreshform();
+                }
+            }
+        }
     }
 }
