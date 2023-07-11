@@ -111,6 +111,22 @@ namespace Final_Project_PABD
             {
                 MessageBox.Show("Harap Semuannya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Gerbong (id_gerbong, no_gerbong, kelas, kapasitas) VALUES (@id_gerbong, @no_gerbong, @kelas, @kapasitas)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text; 
+                cmd.Parameters.Add(new SqlParameter("@id_gerbong", id_gerbong));
+                cmd.Parameters.Add(new SqlParameter("@no_gerbong", no_gerbong));
+                cmd.Parameters.Add(new SqlParameter("@kelas", kelas));
+                cmd.Parameters.Add(new SqlParameter("@kapasitas", kapasitas));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
         }
     }
 }
