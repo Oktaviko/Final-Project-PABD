@@ -13,7 +13,7 @@ namespace Final_Project_PABD
 {
     public partial class FormDataPelanggan : Form
     {
-        private string stringconnection = "data source = OKTAVIKO\\YEELZY;database=FinalPABD;MultipleActiveResultSets=True;User ID = sa; password = 123";
+        private string stringconnection = "data source=LAPTOP-NAUFALAS\\NAUFALAS;" + "database=FinalPABD;user ID=sa;password=bahtera1234";
         private SqlConnection koneksi;
         public FormDataPelanggan()
         {
