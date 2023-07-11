@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nmkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idkeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jnskeretaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idstasiunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.keretaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finalPABDDataSet = new Final_Project_PABD.FinalPABDDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,52 +52,14 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nmkeretaDataGridViewTextBoxColumn,
-            this.idkeretaDataGridViewTextBoxColumn,
-            this.jnskeretaDataGridViewTextBoxColumn,
-            this.idstasiunDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.keretaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(39, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(438, 182);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // nmkeretaDataGridViewTextBoxColumn
-            // 
-            this.nmkeretaDataGridViewTextBoxColumn.DataPropertyName = "nm_kereta";
-            this.nmkeretaDataGridViewTextBoxColumn.HeaderText = "nm_kereta";
-            this.nmkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nmkeretaDataGridViewTextBoxColumn.Name = "nmkeretaDataGridViewTextBoxColumn";
-            this.nmkeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idkeretaDataGridViewTextBoxColumn
-            // 
-            this.idkeretaDataGridViewTextBoxColumn.DataPropertyName = "id_kereta";
-            this.idkeretaDataGridViewTextBoxColumn.HeaderText = "id_kereta";
-            this.idkeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idkeretaDataGridViewTextBoxColumn.Name = "idkeretaDataGridViewTextBoxColumn";
-            this.idkeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jnskeretaDataGridViewTextBoxColumn
-            // 
-            this.jnskeretaDataGridViewTextBoxColumn.DataPropertyName = "jns_kereta";
-            this.jnskeretaDataGridViewTextBoxColumn.HeaderText = "jns_kereta";
-            this.jnskeretaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jnskeretaDataGridViewTextBoxColumn.Name = "jnskeretaDataGridViewTextBoxColumn";
-            this.jnskeretaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idstasiunDataGridViewTextBoxColumn
-            // 
-            this.idstasiunDataGridViewTextBoxColumn.DataPropertyName = "id_stasiun";
-            this.idstasiunDataGridViewTextBoxColumn.HeaderText = "id_stasiun";
-            this.idstasiunDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idstasiunDataGridViewTextBoxColumn.Name = "idstasiunDataGridViewTextBoxColumn";
-            this.idstasiunDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // keretaBindingSource
             // 
@@ -275,10 +233,6 @@
         private FinalPABDDataSet finalPABDDataSet;
         private System.Windows.Forms.BindingSource keretaBindingSource;
         private FinalPABDDataSetTableAdapters.KeretaTableAdapter keretaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nmkeretaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idkeretaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jnskeretaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idstasiunDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDelete;
     }
 }
