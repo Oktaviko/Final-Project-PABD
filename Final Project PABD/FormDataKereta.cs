@@ -30,6 +30,8 @@ namespace Final_Project_PABD
 
         private void FormDataKereta_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'finalPABDDataSet.Kereta' table. You can move, or remove it, as needed.
+            this.keretaTableAdapter.Fill(this.finalPABDDataSet.Kereta);
 
         }
 
