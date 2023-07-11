@@ -48,7 +48,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(72, 382);
+            this.btnAdd.Location = new System.Drawing.Point(106, 384);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(76, 40);
             this.btnAdd.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(180, 382);
+            this.btnDelete.Location = new System.Drawing.Point(214, 384);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(76, 40);
             this.btnDelete.TabIndex = 1;
@@ -88,9 +88,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(713, 415);
+            this.btnBack.Location = new System.Drawing.Point(713, 411);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(75, 27);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -187,6 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbxIDpesan);
             this.Controls.Add(this.cbxIDTiket);

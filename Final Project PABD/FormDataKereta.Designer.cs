@@ -47,6 +47,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxIDStasiun = new System.Windows.Forms.ComboBox();
+            this.Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
@@ -123,7 +124,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(232, 397);
+            this.btnAdd.Location = new System.Drawing.Point(199, 404);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 34);
             this.btnAdd.TabIndex = 6;
@@ -182,7 +183,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(123, 397);
+            this.btnDelete.Location = new System.Drawing.Point(90, 404);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 34);
             this.btnDelete.TabIndex = 14;
@@ -208,12 +209,23 @@
             this.cbxIDStasiun.TabIndex = 16;
             this.cbxIDStasiun.SelectedIndexChanged += new System.EventHandler(this.cbxIDStasiun_SelectedIndexChanged);
             // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(298, 404);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 34);
+            this.Update.TabIndex = 17;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
             // FormDataKereta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.cbxIDStasiun);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDelete);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxIDStasiun;
+        private System.Windows.Forms.Button Update;
     }
 }
