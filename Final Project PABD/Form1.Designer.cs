@@ -70,11 +70,11 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataStasiunToolStripMenuItem,
-            this.dataKeretaToolStripMenuItem,
             this.dataPelangganToolStripMenuItem,
-            this.dataGerbongToolStripMenuItem,
-            this.dataTiketToolStripMenuItem});
+            this.dataStasiunToolStripMenuItem,
+            this.dataTiketToolStripMenuItem,
+            this.dataKeretaToolStripMenuItem,
+            this.dataGerbongToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -119,6 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MintCream;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(444, 93);
             this.label1.Name = "label1";
@@ -130,6 +131,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Aquamarine;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(119, 201);
             this.label2.Name = "label2";
@@ -160,6 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
+            this.BackgroundImage = global::Final_Project_PABD.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1093, 457);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
