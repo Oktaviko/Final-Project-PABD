@@ -35,12 +35,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtNm = new System.Windows.Forms.TextBox();
             this.txtIdS = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.cbxTikt = new System.Windows.Forms.ComboBox();
             this.tbxTujuan = new System.Windows.Forms.TextBox();
             this.tbxKbr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -120,15 +118,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "ID Stasiun";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 281);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "ID Tiket";
-            // 
             // txtNm
             // 
             this.txtNm.Location = new System.Drawing.Point(185, 200);
@@ -164,15 +153,6 @@
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // cbxTikt
-            // 
-            this.cbxTikt.FormattingEnabled = true;
-            this.cbxTikt.Location = new System.Drawing.Point(185, 273);
-            this.cbxTikt.Name = "cbxTikt";
-            this.cbxTikt.Size = new System.Drawing.Size(127, 24);
-            this.cbxTikt.TabIndex = 17;
-            this.cbxTikt.SelectedIndexChanged += new System.EventHandler(this.cbxTikt_SelectedIndexChanged);
             // 
             // tbxTujuan
             // 
@@ -249,12 +229,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxKbr);
             this.Controls.Add(this.tbxTujuan);
-            this.Controls.Add(this.cbxTikt);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtIdS);
             this.Controls.Add(this.txtNm);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
@@ -280,12 +258,10 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNm;
         private System.Windows.Forms.TextBox txtIdS;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.ComboBox cbxTikt;
         private System.Windows.Forms.TextBox tbxTujuan;
         private System.Windows.Forms.TextBox tbxKbr;
         private System.Windows.Forms.Label label2;

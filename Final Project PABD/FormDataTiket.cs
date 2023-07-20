@@ -64,6 +64,8 @@ namespace Final_Project_PABD
             cbxNamaKereta.Enabled = true;
             cbxTujuan.Text = "";
             cbxTujuan.Enabled = true;
+            cbxIDStasiun.Text = "";
+            cbxIDStasiun.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
@@ -100,12 +102,14 @@ namespace Final_Project_PABD
             cbxKeberangkatan.Enabled = true;
             cbxTujuan.Enabled = true;
             cbxNamaKereta.Enabled = true;
+            cbxIDStasiun.Enabled = true;
             btnClear.Enabled = true;
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
             namakereta();
             tjn();
             kbrangktn();
+            idstas();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -115,8 +119,9 @@ namespace Final_Project_PABD
             string no_kursi = tbxNoKursi.Text;
             string tujuan = cbxTujuan.Text;
             string keberangkatan = cbxKeberangkatan.Text;
+            string id_stasiun = cbxIDStasiun.Text;
 
-            if (id_tiket == "" || nm_kereta == "" || no_kursi == "" || tujuan == "" || keberangkatan == "")
+            if (id_tiket == "" || nm_kereta == "" || no_kursi == "" || tujuan == "" || id_stasiun == ""|| keberangkatan == "")
             {
                 MessageBox.Show("Harap masukkan semua data ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -131,6 +136,7 @@ namespace Final_Project_PABD
                 cmd.Parameters.Add(new SqlParameter("@no_kursi", no_kursi));
                 cmd.Parameters.Add(new SqlParameter("@tujuan", tujuan));
                 cmd.Parameters.Add(new SqlParameter("@keberangkatan", keberangkatan));
+                cmd.Parameters.Add(new SqlParameter("@id_stasiun", id_stasiun));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
@@ -264,6 +270,7 @@ namespace Final_Project_PABD
             string nokursi = tbxNoKursi.Text;
             string keberangkatan = cbxKeberangkatan.Text;
             string tujuan = cbxTujuan.Text;
+            string id_stasiun=cbxIDStasiun.Text;
 
             if (id == "")
             {
@@ -290,8 +297,13 @@ namespace Final_Project_PABD
                 MessageBox.Show("Masukkan kota tujuan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (id_stasiun == "")
+            {
+                MessageBox.Show("Masukkan ID Stasiun", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            string sql = "UPDATE tiket SET nm_kereta = @nm_kereta, no_kursi = @no_kursi, keberangkatan = @keberangkatan, tujuan = @tujuan WHERE id_tiket = @id_tiket";
+            string sql = "UPDATE tiket SET nm_kereta = @nm_kereta, id_stasiun = @id_stasiun ,no_kursi = @no_kursi, keberangkatan = @keberangkatan, tujuan = @tujuan WHERE id_tiket = @id_tiket";
             using (SqlCommand command = new SqlCommand(sql, koneksi))
             {
                 command.Parameters.AddWithValue("@id_tiket", id);
@@ -299,6 +311,7 @@ namespace Final_Project_PABD
                 command.Parameters.AddWithValue("@no_kursi", nokursi);
                 command.Parameters.AddWithValue("@keberangkatan", keberangkatan);
                 command.Parameters.AddWithValue("@tujuan", tujuan);
+                command.Parameters.AddWithValue("@id_stasiun", id_stasiun);
 
                 try
                 {
@@ -335,6 +348,26 @@ namespace Final_Project_PABD
             // Panggil metode pencarian secara real-time ketika isi TextBox berubah
             string searchTerm = tbxSearch.Text;
             GetDataFromDatabase(searchTerm);
+        }
+
+        private void cbxIDStasiun_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idstas()
+        {
+            koneksi.Open();
+            string str = "select id_stasiun from dbo.Stasiun";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxTujuan.DisplayMember = "id_stasiun";
+            cbxTujuan.ValueMember = "id_stasiun";
+            cbxTujuan.DataSource = ds.Tables[0];
         }
     }
 }

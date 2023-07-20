@@ -48,6 +48,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.cbxIDStasiun = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 347);
+            this.label2.Location = new System.Drawing.Point(73, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 14;
@@ -103,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 308);
+            this.label3.Location = new System.Drawing.Point(74, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 15;
@@ -121,7 +123,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 390);
+            this.label5.Location = new System.Drawing.Point(73, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 17;
@@ -129,7 +131,7 @@
             // 
             // tbxNoKursi
             // 
-            this.tbxNoKursi.Location = new System.Drawing.Point(236, 384);
+            this.tbxNoKursi.Location = new System.Drawing.Point(236, 369);
             this.tbxNoKursi.Name = "tbxNoKursi";
             this.tbxNoKursi.Size = new System.Drawing.Size(121, 22);
             this.tbxNoKursi.TabIndex = 19;
@@ -137,7 +139,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(123, 435);
+            this.btnAdd.Location = new System.Drawing.Point(123, 439);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 39);
             this.btnAdd.TabIndex = 20;
@@ -168,7 +170,7 @@
             // cbxKeberangkatan
             // 
             this.cbxKeberangkatan.FormattingEnabled = true;
-            this.cbxKeberangkatan.Location = new System.Drawing.Point(236, 339);
+            this.cbxKeberangkatan.Location = new System.Drawing.Point(236, 337);
             this.cbxKeberangkatan.Name = "cbxKeberangkatan";
             this.cbxKeberangkatan.Size = new System.Drawing.Size(121, 24);
             this.cbxKeberangkatan.TabIndex = 23;
@@ -194,7 +196,7 @@
             // cbxNamaKereta
             // 
             this.cbxNamaKereta.FormattingEnabled = true;
-            this.cbxNamaKereta.Location = new System.Drawing.Point(236, 265);
+            this.cbxNamaKereta.Location = new System.Drawing.Point(236, 262);
             this.cbxNamaKereta.Name = "cbxNamaKereta";
             this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxNamaKereta.TabIndex = 26;
@@ -202,7 +204,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(231, 435);
+            this.btnDelete.Location = new System.Drawing.Point(231, 439);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
             this.btnDelete.TabIndex = 27;
@@ -212,7 +214,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(353, 435);
+            this.btnUpdate.Location = new System.Drawing.Point(353, 439);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(83, 39);
             this.btnUpdate.TabIndex = 28;
@@ -238,12 +240,32 @@
             this.tbxSearch.TabIndex = 30;
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
+            // cbxIDStasiun
+            // 
+            this.cbxIDStasiun.FormattingEnabled = true;
+            this.cbxIDStasiun.Location = new System.Drawing.Point(236, 397);
+            this.cbxIDStasiun.Name = "cbxIDStasiun";
+            this.cbxIDStasiun.Size = new System.Drawing.Size(121, 24);
+            this.cbxIDStasiun.TabIndex = 31;
+            this.cbxIDStasiun.SelectedIndexChanged += new System.EventHandler(this.cbxIDStasiun_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(76, 404);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "ID Stasiun";
+            // 
             // FormDataTiket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 499);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbxIDStasiun);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnUpdate);
@@ -295,5 +317,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.ComboBox cbxIDStasiun;
+        private System.Windows.Forms.Label label6;
     }
 }
