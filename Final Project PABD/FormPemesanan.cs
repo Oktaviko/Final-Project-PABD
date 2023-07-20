@@ -52,11 +52,27 @@ namespace Final_Project_PABD
             GetDataFromDatabase(); // Memanggil method untuk mengambil data dari database dan mengisi DataGridView
             btnOpen.Enabled = false;
         }
-        private void GetDataFromDatabase()
+        private void GetDataFromDatabase(string searchTerm = "")
         {
             koneksi.Open();
-            string str = "SELECT * FROM dbo.Pemesanan";
+            string str;
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                str = "SELECT * FROM dbo.Pemesanan";
+            }
+            else
+            {
+                str = "SELECT * FROM dbo.Pemesanan WHERE id_pemesanan LIKE @searchTerm OR id_tiket LIKE @searchTerm OR nik LIKE @searchTerm OR no_hp LIKE @searchTerm";
+            }
+
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+            }
+
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -281,6 +297,20 @@ namespace Final_Project_PABD
                 }
                 
             }
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            // Panggil metode pencarian secara real-time ketika isi TextBox berubah
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
+
         }
     }
 }
