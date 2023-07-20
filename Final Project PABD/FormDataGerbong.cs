@@ -88,16 +88,31 @@ namespace Final_Project_PABD
             GetDataFromDatabase();
             btnOpen.Enabled = false;
         }
-        private void GetDataFromDatabase()
+        private void GetDataFromDatabase(string searchTerm="")
         {
             koneksi.Open();
-            string str = "SELECT * FROM dbo.Gerbong";
-            SqlDataAdapter da = new  SqlDataAdapter(str, koneksi);
+            string str;
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                str = "SELECT * FROM dbo.Gerbong";
+            }
+            else
+            {
+                str = "SELECT * FROM dbo.Gerbong WHERE id_gerbong LIKE @searchTerm OR no_gerbong LIKE @searchTerm OR kelas LIKE @searchTerm OR kapasitas LIKE @searchTerm OR id_kereta LIKE @searchTerm";
+            }
+
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+            }
+
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             koneksi.Close();
-        
         }
 
         private void dataGridView1_CellContentClick()
@@ -280,6 +295,19 @@ namespace Final_Project_PABD
         private void cbxIDKreta_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            // Panggil metode pencarian secara real-time ketika isi TextBox berubah
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
         }
     }
 }
