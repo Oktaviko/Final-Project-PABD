@@ -39,6 +39,7 @@
             this.dataTiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dataPemesananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -51,7 +52,8 @@
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton3});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
@@ -72,13 +74,12 @@
             this.dataKeretaToolStripMenuItem,
             this.dataPelangganToolStripMenuItem,
             this.dataGerbongToolStripMenuItem,
-            this.dataTiketToolStripMenuItem,
-            this.dataPemesananToolStripMenuItem});
+            this.dataTiketToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
-            this.toolStripDropDownButton1.Text = "DATA";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(120, 24);
+            this.toolStripDropDownButton1.Text = "DATA MASTER";
             // 
             // dataStasiunToolStripMenuItem
             // 
@@ -136,12 +137,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "DATABASE PEMESANAN TIKET KERETA API";
             // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataPemesananToolStripMenuItem});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(141, 24);
+            this.toolStripDropDownButton3.Text = "DATA TRANSAKSI";
+            // 
             // dataPemesananToolStripMenuItem
             // 
             this.dataPemesananToolStripMenuItem.Name = "dataPemesananToolStripMenuItem";
             this.dataPemesananToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataPemesananToolStripMenuItem.Text = "Data Pemesanan";
-            this.dataPemesananToolStripMenuItem.Click += new System.EventHandler(this.dataPemesananToolStripMenuItem_Click);
+            this.dataPemesananToolStripMenuItem.Click += new System.EventHandler(this.dataPemesananToolStripMenuItem_Click_1);
             // 
             // HalamanUtama
             // 
@@ -174,6 +186,7 @@
         private System.Windows.Forms.ToolStripMenuItem dataTiketToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem dataPemesananToolStripMenuItem;
     }
 }

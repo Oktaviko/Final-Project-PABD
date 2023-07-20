@@ -69,6 +69,21 @@ namespace Final_Project_PABD
 
         private void dataPemesananToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataPemesananToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
             FormPemesanan fm = new FormPemesanan();
             fm.Show();
             this.Hide();
