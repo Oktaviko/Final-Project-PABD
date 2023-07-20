@@ -39,11 +39,27 @@ namespace Final_Project_PABD
             btnClear.Enabled = false;
             btnAdd.Enabled = true;
         }
-        private void GetDataFromDatabase()
+        private void GetDataFromDatabase(string searchTerm="")
         {
             koneksi.Open();
-            string str = "SELECT * FROM dbo.Stasiun";
+            string str;
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                str = "SELECT * FROM dbo.Stasiun";
+            }
+            else
+            {
+                str = "SELECT * FROM dbo.Stasiun WHERE nm_stasiun LIKE @searchTerm OR keberangkatan LIKE @searchTerm OR tujuan LIKE @searchTerm";
+            }
+
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+            }
+
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -270,6 +286,17 @@ namespace Final_Project_PABD
         private void txtNm_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
         }
     }
 }
