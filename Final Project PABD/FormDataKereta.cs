@@ -111,8 +111,10 @@ namespace Final_Project_PABD
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
-                dataGridView1_CellContentClick();
                 refreshform();
+                // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+                GetDataFromDatabase();
+
             }
 
         }
@@ -157,6 +159,8 @@ namespace Final_Project_PABD
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
             id_staisunn();
+            // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+            GetDataFromDatabase();
         }
 
         private void dataGridView1_CellContentClick()
@@ -199,6 +203,8 @@ namespace Final_Project_PABD
                     koneksi.Close();
                     dataGridView1_CellContentClick();
                     refreshform();
+                    // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+                    GetDataFromDatabase();
                 }
             }
         }
@@ -287,7 +293,8 @@ namespace Final_Project_PABD
                 {
                     MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+                GetDataFromDatabase();
             }
         }
 
@@ -299,7 +306,9 @@ namespace Final_Project_PABD
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-
+            // Panggil metode pencarian secara real-time ketika isi TextBox berubah
+            string searchTerm = tbxSearch.Text;
+            GetDataFromDatabase(searchTerm);
         }
     }
 }

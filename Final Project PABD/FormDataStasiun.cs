@@ -100,8 +100,8 @@ namespace Final_Project_PABD
             btnSave.Enabled = true;
             btnAdd.Enabled = false;
             foreignkey();
-
-        
+            // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+            GetDataFromDatabase();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -148,6 +148,9 @@ namespace Final_Project_PABD
                 koneksi.Close();
                 dataGridView1_CellContentClick();
                 refreshform();
+
+                // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+                GetDataFromDatabase();
             }
         }
         private void HapusData()
@@ -173,6 +176,9 @@ namespace Final_Project_PABD
                     koneksi.Close();
                     dataGridView1_CellContentClick();
                     refreshform();
+
+                    // Memanggil metode GetDataFromDatabase() untuk mengambil data terbaru dari database
+                    GetDataFromDatabase();
                 }
             }
         }
