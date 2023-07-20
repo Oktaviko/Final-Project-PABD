@@ -277,13 +277,9 @@ namespace Final_Project_PABD
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
             string searchTerm = tbxSearch.Text;
             GetDataFromDatabase(searchTerm);
         }
+
     }
 }

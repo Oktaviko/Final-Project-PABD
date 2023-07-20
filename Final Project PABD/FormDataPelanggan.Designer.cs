@@ -44,7 +44,6 @@
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtNIK = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,13 +55,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(639, 161);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 246);
+            this.label1.Location = new System.Drawing.Point(193, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 1;
@@ -71,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 285);
+            this.label2.Location = new System.Drawing.Point(193, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 16);
             this.label2.TabIndex = 2;
@@ -80,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 323);
+            this.label3.Location = new System.Drawing.Point(193, 320);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 3;
@@ -89,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 359);
+            this.label4.Location = new System.Drawing.Point(193, 356);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 4;
@@ -97,7 +96,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(496, 34);
+            this.btnOpen.Location = new System.Drawing.Point(695, 38);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 38);
             this.btnOpen.TabIndex = 5;
@@ -107,7 +106,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(107, 396);
+            this.btnAdd.Location = new System.Drawing.Point(206, 393);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 42);
             this.btnAdd.TabIndex = 6;
@@ -117,7 +116,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(361, 259);
+            this.btnClear.Location = new System.Drawing.Point(460, 256);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(79, 42);
             this.btnClear.TabIndex = 7;
@@ -127,7 +126,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(361, 333);
+            this.btnSave.Location = new System.Drawing.Point(460, 330);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 42);
             this.btnSave.TabIndex = 8;
@@ -147,7 +146,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 396);
+            this.button1.Location = new System.Drawing.Point(322, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 42);
             this.button1.TabIndex = 10;
@@ -157,35 +156,35 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(190, 240);
+            this.txtNama.Location = new System.Drawing.Point(289, 237);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(130, 22);
             this.txtNama.TabIndex = 11;
             // 
             // txtNohp
             // 
-            this.txtNohp.Location = new System.Drawing.Point(190, 353);
+            this.txtNohp.Location = new System.Drawing.Point(289, 350);
             this.txtNohp.Name = "txtNohp";
             this.txtNohp.Size = new System.Drawing.Size(130, 22);
             this.txtNohp.TabIndex = 12;
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(190, 317);
+            this.txtAlamat.Location = new System.Drawing.Point(289, 314);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(130, 22);
             this.txtAlamat.TabIndex = 13;
             // 
             // txtNIK
             // 
-            this.txtNIK.Location = new System.Drawing.Point(190, 279);
+            this.txtNIK.Location = new System.Drawing.Point(289, 276);
             this.txtNIK.Name = "txtNIK";
             this.txtNIK.Size = new System.Drawing.Size(130, 22);
             this.txtNIK.TabIndex = 14;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(340, 396);
+            this.btnUpdate.Location = new System.Drawing.Point(439, 393);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 42);
             this.btnUpdate.TabIndex = 15;
@@ -193,22 +192,13 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(657, 269);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 16;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(532, 269);
+            this.tbxSearch.Location = new System.Drawing.Point(39, 195);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 22);
             this.tbxSearch.TabIndex = 17;
+            this.tbxSearch.Text = "Search";
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // FormDataPelanggan
@@ -218,7 +208,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbxSearch);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtNIK);
             this.Controls.Add(this.txtAlamat);
@@ -262,7 +251,6 @@
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtNIK;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbxSearch;
     }
 }

@@ -46,7 +46,6 @@
             this.cbxNamaKereta = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.cbxIDStasiun = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,13 +59,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(639, 154);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(555, 42);
+            this.btnOpen.Location = new System.Drawing.Point(693, 38);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 40);
             this.btnOpen.TabIndex = 5;
@@ -87,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 225);
+            this.label1.Location = new System.Drawing.Point(203, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 13;
@@ -96,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 339);
+            this.label2.Location = new System.Drawing.Point(204, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 14;
@@ -105,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 303);
+            this.label3.Location = new System.Drawing.Point(203, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 15;
@@ -114,7 +113,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 265);
+            this.label4.Location = new System.Drawing.Point(204, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 16;
@@ -123,7 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 375);
+            this.label5.Location = new System.Drawing.Point(204, 372);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 17;
@@ -131,7 +130,7 @@
             // 
             // tbxNoKursi
             // 
-            this.tbxNoKursi.Location = new System.Drawing.Point(236, 369);
+            this.tbxNoKursi.Location = new System.Drawing.Point(367, 366);
             this.tbxNoKursi.Name = "tbxNoKursi";
             this.tbxNoKursi.Size = new System.Drawing.Size(121, 22);
             this.tbxNoKursi.TabIndex = 19;
@@ -139,7 +138,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(123, 439);
+            this.btnAdd.Location = new System.Drawing.Point(226, 439);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 39);
             this.btnAdd.TabIndex = 20;
@@ -149,7 +148,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(418, 274);
+            this.btnSave.Location = new System.Drawing.Point(547, 274);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 39);
             this.btnSave.TabIndex = 21;
@@ -159,7 +158,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(418, 324);
+            this.btnClear.Location = new System.Drawing.Point(547, 324);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 39);
             this.btnClear.TabIndex = 22;
@@ -170,7 +169,7 @@
             // cbxKeberangkatan
             // 
             this.cbxKeberangkatan.FormattingEnabled = true;
-            this.cbxKeberangkatan.Location = new System.Drawing.Point(236, 337);
+            this.cbxKeberangkatan.Location = new System.Drawing.Point(367, 334);
             this.cbxKeberangkatan.Name = "cbxKeberangkatan";
             this.cbxKeberangkatan.Size = new System.Drawing.Size(121, 24);
             this.cbxKeberangkatan.TabIndex = 23;
@@ -179,7 +178,7 @@
             // cbxTujuan
             // 
             this.cbxTujuan.FormattingEnabled = true;
-            this.cbxTujuan.Location = new System.Drawing.Point(236, 300);
+            this.cbxTujuan.Location = new System.Drawing.Point(367, 297);
             this.cbxTujuan.Name = "cbxTujuan";
             this.cbxTujuan.Size = new System.Drawing.Size(121, 24);
             this.cbxTujuan.TabIndex = 24;
@@ -187,7 +186,7 @@
             // 
             // tbxIDTiket
             // 
-            this.tbxIDTiket.Location = new System.Drawing.Point(236, 222);
+            this.tbxIDTiket.Location = new System.Drawing.Point(367, 224);
             this.tbxIDTiket.Name = "tbxIDTiket";
             this.tbxIDTiket.Size = new System.Drawing.Size(121, 22);
             this.tbxIDTiket.TabIndex = 25;
@@ -196,7 +195,7 @@
             // cbxNamaKereta
             // 
             this.cbxNamaKereta.FormattingEnabled = true;
-            this.cbxNamaKereta.Location = new System.Drawing.Point(236, 262);
+            this.cbxNamaKereta.Location = new System.Drawing.Point(367, 259);
             this.cbxNamaKereta.Name = "cbxNamaKereta";
             this.cbxNamaKereta.Size = new System.Drawing.Size(121, 24);
             this.cbxNamaKereta.TabIndex = 26;
@@ -204,7 +203,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(231, 439);
+            this.btnDelete.Location = new System.Drawing.Point(334, 439);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
             this.btnDelete.TabIndex = 27;
@@ -214,7 +213,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(353, 439);
+            this.btnUpdate.Location = new System.Drawing.Point(456, 439);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(83, 39);
             this.btnUpdate.TabIndex = 28;
@@ -222,28 +221,19 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(660, 286);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 37);
-            this.btnSearch.TabIndex = 29;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(544, 293);
+            this.tbxSearch.Location = new System.Drawing.Point(48, 189);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 22);
             this.tbxSearch.TabIndex = 30;
+            this.tbxSearch.Text = "Search";
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // cbxIDStasiun
             // 
             this.cbxIDStasiun.FormattingEnabled = true;
-            this.cbxIDStasiun.Location = new System.Drawing.Point(236, 397);
+            this.cbxIDStasiun.Location = new System.Drawing.Point(367, 396);
             this.cbxIDStasiun.Name = "cbxIDStasiun";
             this.cbxIDStasiun.Size = new System.Drawing.Size(121, 24);
             this.cbxIDStasiun.TabIndex = 31;
@@ -252,7 +242,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 404);
+            this.label6.Location = new System.Drawing.Point(203, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 16);
             this.label6.TabIndex = 32;
@@ -267,7 +257,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbxIDStasiun);
             this.Controls.Add(this.tbxSearch);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxNamaKereta);
@@ -315,7 +304,6 @@
         private System.Windows.Forms.ComboBox cbxNamaKereta;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.ComboBox cbxIDStasiun;
         private System.Windows.Forms.Label label6;

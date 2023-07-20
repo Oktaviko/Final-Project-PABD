@@ -303,11 +303,5 @@ namespace Final_Project_PABD
             string searchTerm = tbxSearch.Text;
             GetDataFromDatabase(searchTerm);
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchTerm = tbxSearch.Text;
-            GetDataFromDatabase(searchTerm);
-        }
     }
 }

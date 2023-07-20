@@ -43,11 +43,11 @@ namespace Final_Project_PABD
 
             if (string.IsNullOrEmpty(searchTerm))
             {
-                str = "SELECT * FROM dbo.Tiket";
+                str = "SELECT * FROM dbo.Pelanggan";
             }
             else
             {
-                str = "SELECT * FROM dbo.Tiket WHERE id_tiket LIKE @searchTerm OR nm_kereta LIKE @searchTerm OR no_kursi LIKE @searchTerm OR keberangkatan LIKE @searchTerm OR tujuan LIKE @searchTerm";
+                str = "SELECT * FROM dbo.Pelanggan WHERE nik LIKE @searchTerm OR nama LIKE @searchTerm OR nik LIKE @searchTerm OR no_hp LIKE @searchTerm OR alamat LIKE @searchTerm";
             }
 
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
@@ -176,7 +176,7 @@ namespace Final_Project_PABD
                 return;
             }
 
-            string id = dataGridView1.SelectedRows[0].Cells["NIK"].Value.ToString();
+            string id = dataGridView1.SelectedRows[0].Cells["nik"].Value.ToString();
             string nama = txtNama.Text;
             string no_hp = txtNohp.Text;
             string alamat = txtAlamat.Text;
@@ -203,7 +203,7 @@ namespace Final_Project_PABD
             }
 
 
-            string sql = "UPDATE pelanggan SET nama = @nama, no_hp = @no_hp, alamat = @alamat where NIK = @NIK";
+            string sql = "UPDATE pelanggan SET nama = @nama, no_hp = @no_hp, alamat = @alamat where nik = @NIK";
             using (SqlCommand command = new SqlCommand(sql, koneksi))
             {
                 command.Parameters.AddWithValue("@NIK", id);
@@ -242,10 +242,5 @@ namespace Final_Project_PABD
             GetDataFromDatabase(searchTerm);
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchTerm = tbxSearch.Text;
-            GetDataFromDatabase(searchTerm);
-        }
     }
 }

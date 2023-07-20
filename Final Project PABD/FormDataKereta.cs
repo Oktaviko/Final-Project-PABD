@@ -298,11 +298,6 @@ namespace Final_Project_PABD
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string inputPencarian = tbxSearch.Text;
-            GetDataFromDatabase(inputPencarian);
-        }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {

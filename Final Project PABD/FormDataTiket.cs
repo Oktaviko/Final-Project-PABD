@@ -337,12 +337,6 @@ namespace Final_Project_PABD
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchTerm = tbxSearch.Text;
-            GetDataFromDatabase(searchTerm);
-        }
-
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
             // Panggil metode pencarian secara real-time ketika isi TextBox berubah
@@ -365,9 +359,9 @@ namespace Final_Project_PABD
             da.Fill(ds);
             cmd.ExecuteReader();
             koneksi.Close();
-            cbxTujuan.DisplayMember = "id_stasiun";
-            cbxTujuan.ValueMember = "id_stasiun";
-            cbxTujuan.DataSource = ds.Tables[0];
+            cbxIDStasiun.DisplayMember = "id_stasiun";
+            cbxIDStasiun.ValueMember = "id_stasiun";
+            cbxIDStasiun.DataSource = ds.Tables[0];
         }
     }
 }
