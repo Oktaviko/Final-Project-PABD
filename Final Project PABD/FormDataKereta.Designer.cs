@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbxIDStasiun = new System.Windows.Forms.ComboBox();
             this.Update = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keretaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalPABDDataSet)).BeginInit();
@@ -219,12 +221,32 @@
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(625, 256);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(76, 32);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(490, 266);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 22);
+            this.tbxSearch.TabIndex = 19;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
             // FormDataKereta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbxSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.cbxIDStasiun);
             this.Controls.Add(this.label4);
@@ -273,5 +295,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxIDStasiun;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
     }
 }

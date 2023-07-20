@@ -28,11 +28,26 @@ namespace Final_Project_PABD
             btnOpen.Enabled = false;
         }
 
-        private void GetDataFromDatabase()
+        private void GetDataFromDatabase(string pencarian ="")
         {
             koneksi.Open();
-            string str = "SELECT * FROM dbo.Kereta";
+            string str;
+
+            if (string.IsNullOrEmpty(pencarian))
+            {
+                str = "SELECT * FROM dbo.Kereta";
+            }
+            else
+            {
+                str = "SELECT * FROM dbo.Kereta WHERE nm_kereta LIKE @pencarian OR jns_kereta LIKE @pencarian OR id_kereta LIKE @pencarian OR id_stasiun LIKE @pencarian";
+            }
+
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            if (!string.IsNullOrEmpty(pencarian))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@pencarian", "%" + pencarian + "%");
+            }
+
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -274,6 +289,17 @@ namespace Final_Project_PABD
                 }
 
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string inputPencarian = tbxSearch.Text;
+            GetDataFromDatabase(inputPencarian);
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
