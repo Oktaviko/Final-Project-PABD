@@ -102,6 +102,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(225, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
@@ -111,6 +113,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(225, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
@@ -172,6 +176,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(225, 306);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
@@ -181,6 +187,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(225, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 16);
@@ -211,6 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = global::Final_Project_PABD.Properties.Resources.images;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnUpdate);
