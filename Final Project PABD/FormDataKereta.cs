@@ -63,6 +63,9 @@ namespace Final_Project_PABD
             cbxJenisKereta.Items.Add("KAJJ");
             cbxJenisKereta.Items.Add("KL");
 
+            tbxSearch.GotFocus += tbxSearch_GotFocus;
+            tbxSearch.LostFocus += tbxSearch_LostFocus;
+
         }
         private void id_staisunn()
         {
@@ -304,6 +307,21 @@ namespace Final_Project_PABD
             // Panggil metode pencarian secara real-time ketika isi TextBox berubah
             string searchTerm = tbxSearch.Text;
             GetDataFromDatabase(searchTerm);
+        }
+        private void tbxSearch_GotFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "Search")
+            {
+                tbxSearch.Text = "";
+            }
+        }
+
+        private void tbxSearch_LostFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "")
+            {
+                tbxSearch.Text = "Search";
+            }
         }
     }
 }

@@ -73,7 +73,8 @@ namespace Final_Project_PABD
 
         private void FormDataTiket_Load(object sender, EventArgs e)
         {
-            
+            tbxSearch.GotFocus += tbxSearch_GotFocus;
+            tbxSearch.LostFocus += tbxSearch_LostFocus;
         }
 
 
@@ -362,6 +363,21 @@ namespace Final_Project_PABD
             cbxIDStasiun.DisplayMember = "id_stasiun";
             cbxIDStasiun.ValueMember = "id_stasiun";
             cbxIDStasiun.DataSource = ds.Tables[0];
+        }
+        private void tbxSearch_GotFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "Search")
+            {
+                tbxSearch.Text = "";
+            }
+        }
+
+        private void tbxSearch_LostFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "")
+            {
+                tbxSearch.Text = "Search";
+            }
         }
     }
 }

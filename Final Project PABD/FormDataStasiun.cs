@@ -66,7 +66,8 @@ namespace Final_Project_PABD
 
         private void FormDataStasiun_Load(object sender, EventArgs e)
         {
-
+            tbxSearch.GotFocus += tbxSearch_GotFocus;
+            tbxSearch.LostFocus += tbxSearch_LostFocus;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -277,8 +278,25 @@ namespace Final_Project_PABD
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
+
             string searchTerm = tbxSearch.Text;
             GetDataFromDatabase(searchTerm);
+        }
+
+        private void tbxSearch_GotFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "Search")
+            {
+                tbxSearch.Text = "";
+            }
+        }
+
+        private void tbxSearch_LostFocus(object sender, EventArgs e)
+        {
+            if (tbxSearch.Text == "")
+            {
+                tbxSearch.Text = "Search";
+            }
         }
 
     }
